@@ -1,0 +1,33 @@
+@use '../layout/header' as *;
+@use '../abstract/variables' as *;
+@use '../animations/like' as *;
+
+.hero {
+    width: 100%;
+    position: relative;
+    height: 320px;
+    img {
+        width: inherit;
+        position: absolute;
+        object-fit: cover;
+    }
+    &__title {
+        position: absolute;
+        display: flex;
+        justify-content: space-between;
+        // height: 6rem;
+        width: inherit;
+        border-radius: 35px 35px 0 0;
+        background-color: $color-grey;
+        top: 200px;
+        padding: 1.5rem 2rem;
+
+        h1 {
+            font-family: $ff-logo;
+        }
+    }
+    &__heart {
+        @include heart(33px, 27px);
+    }
+}
+

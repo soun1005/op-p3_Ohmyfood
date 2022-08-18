@@ -1,0 +1,25 @@
+@use '../abstract/variables' as *;
+@use '../abstract/mixins' as *;
+
+footer {
+    @include flexbox(column, center, baseline);
+    height: 170px;
+    background-color: $color-footer;
+    color: $color-white;
+    padding: $side-padding;
+    h2 {
+        font-family: $ff-logo;
+        font-size: $s2;
+        margin-bottom: 10px;
+        font-weight: lighter;
+    }
+
+    li {
+        margin-bottom: 5px;
+    }
+
+    a {
+        color: $color-white;
+        font-size: $s4;
+    }
+}

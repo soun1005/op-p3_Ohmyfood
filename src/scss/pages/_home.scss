@@ -1,6 +1,9 @@
 @use '../abstract/variables' as *;
 @use '../abstract/mixins' as *;
-
+@use '../animations/like' as *;
+@use '../animations/loading' as *;
+@use '../layout/header' as *;
+@use '../animations/like' as *;
 
 header {
     img {
@@ -9,30 +12,39 @@ header {
 }
 
 .location {
-    height: 55px;
     @include flexbox(0, center, center);
-    font-size: $s-03;
+    font-size: $s2;
     font-weight: 900;
+    padding: $s1 0;
     @include shadow(inset 0 7px 8px -7px $color-shadow);
     background-color: $color-darkergrey;
     &-i {
         margin-right: 10px;
+      
     }    
+    span {
+        font-size: $s4;
+        font-weight: 400;
+    }
 }
 
 .explore {
-    height: 270px;
     background-color: $color-grey;
     &__wrap {
         @include flexbox(column, center, center);
         background-color: $color-grey;
         height: 100%;
         text-align: center;
+        padding: 3rem 0;
     }
 
     a {
-        margin-top: $s-00;
+        margin-top: $s0;
         @include btn(15px 25px);
+    }
+
+    a:hover {
+        @include btn-hover;
     }
     
     h1 {
@@ -43,18 +55,18 @@ header {
 
     span {
         margin: 0 2.15rem;
-        font-size: $s-02;
+        font-size: $s2;
         font-weight: 100;
     }
 
 }
 
 .function {
-    @include title-spacing;
-
+    padding: $side-padding;
+    margin-bottom: $s3*2;
     h2 {
-        margin-bottom: $s-02;
-        font-size: $s-01;
+        margin: $s3*2 0;
+        font-size: $s1;
     }
 
     a {
@@ -65,8 +77,8 @@ header {
         height: 4rem;
         margin: 0 auto;
         position: relative;
-        margin-top: $s-01;
-        font-size: $s-02;
+        margin-top: $s1;
+        font-size: $s2;
     }
 
     a:hover {
@@ -76,7 +88,7 @@ header {
     i {
         position: absolute;
         color: $color-icon;
-        font-size: $s-02;
+        font-size: $s2;
         left: 40px;
     }
 
@@ -84,8 +96,8 @@ header {
         display: inline-block;
         position: absolute;
         left: 82px;
-        font-size: $s-03;
-        font-weight: 700;
+        font-size: $s3;
+        font-weight: 500;
     }
 
     .card-num {
@@ -104,11 +116,12 @@ header {
 }
 
 .restaurants {
-    @include title-spacing;
+    padding: $side-padding;
     background-color: $color-grey;
+    padding-bottom: 3rem;
     h2 {
-        font-size: $s-01;
-        padding-top: $s-00*2;
+        font-size: 1.25rem;
+        padding: 2rem 0;
     }
     &__wrap {
         @include flexbox(column, center, center);
@@ -118,6 +131,7 @@ header {
     figure {
         width: 100%;
         height: auto;
+        margin-bottom: $s2;
     }
 
     a {
@@ -127,7 +141,6 @@ header {
         position: relative;
         border-radius: 0 0 15px 15px; 
         @include shadow(1px 5px 25px -17px rgba(0,0,0,1));
-        
     }
 
     &__card-label {
@@ -143,7 +156,6 @@ header {
         border-radius: 3px;
     }
 
-
     img {
         width: 100%;
         height: 180px;
@@ -154,6 +166,7 @@ header {
     &__dscr {
         height: auto;
         position: relative;
+        @include heart;
     }
 
     &__dscr__texts {
@@ -163,54 +176,91 @@ header {
         line-height: 22px;
     }
 
-    .fa-regular {
-        position: absolute;
-        right: 20px;
-        top: 7px;
-        font-size: 26px;
-    }
 
-    .fa-solid {
-        position: absolute;
-        right: 20px;
-        top: 7px;
-        font-size: 26px;
-        opacity: 0;
-        background: $gradient;
-        -webkit-background-clip: text;
-        -moz-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        -moz-text-fill-color: transparent;
-    }
+    // .fa-regular {
+    //     position: absolute;
+    //     right: 20px;
+    //     top: 7px;
+    //     font-size: 26px;
+    // }
 
-    .fa-solid:hover {
-    animation: heart--liked 0.4s ease-in-out both;
-    }
+    // .fa-solid {
+    //     position: absolute;
+    //     right: 20px;
+    //     top: 7px;
+    //     font-size: 26px;
+    //     opacity: 0;
+    //     background: $gradient;
+    //     background-clip: text;
+    //     -webkit-background-clip: text;
+    //     -webkit-text-fill-color: transparent;
+    // }
 
-    .fa-solid:active {
-    animation: heart--liked 0.4s ease-in-out both;
-    }
-
-    @keyframes heart--liked {
-    30% {
-        // scale(X , Y);
-        transform: scale(1.2, 1.1);
-        opacity: 0.3;
-    }
-
-    50% {
-        transform: scale(1.0, 1.3);
-        opacity: 0.5;
-    }
-
-    70% {
-        transform: scale(1.2, 1.1);
-        opacity: 0.7;
-    }
-
-    100% {
-        opacity: 1;
-        transform: scale(1.0);
-    }
+    // .fa-solid:hover {
+    //     animation: heart--liked 200ms linear both;
+    // }
 }
+
+// footer {
+//     @include flexbox(column, center, baseline);
+//     height: 170px;
+//     background-color: $color-footer;
+//     color: $color-white;
+//     padding: $side-padding;
+//     h2 {
+//         font-family: $ff-logo;
+//         font-size: $s2;
+//         margin-bottom: 10px;
+//         font-weight: lighter;
+//     }
+
+//     li {
+//         margin-bottom: 5px;
+//     }
+
+//     a {
+//         color: $color-white;
+//         font-size: $s4;
+//     }
+// }
+
+.parent__spinner{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: $color-darkergrey;
+    z-index: 1000;
+    height: 100%;
+    width: 100%;
+    opacity:1;
+    animation: fade;
+    animation-duration: 0s;
+    animation-delay: 3000ms;
+    animation-fill-mode: forwards;
+
+    .loading__spiner{ /* loading spinner */
+        width: 32px;
+        height: 72px;
+        display: inline-block;
+        left: 5px;
+        border: 3px solid $color-base;
+        box-sizing: border-box;
+        color: $color-primary;
+        border-radius: 0 0 4px 4px;
+        margin: auto; /* place in a center*/
+        position: absolute;
+        right:0;
+        top:0;
+        bottom:0;
+        left:0;
+        transform: perspective(140px) rotateX(-45deg);
+        animation: fill 1000ms ease-in-out infinite alternate;
+      }
+}
+
+.body {
+    animation: hide-bg;
+    animation-duration: 3s;
 }

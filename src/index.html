@@ -22,6 +22,11 @@
     <title>ohmyfood</title>
   </head>
   <body>
+    <!-- loading spinner -->
+    <div class="parent__spinner">
+      <div class="loading__spiner"></div>
+    </div>
+
     <div class="container">
       <!-- header -->
       <header>
@@ -50,7 +55,7 @@
         <div class="function">
           <h2>Fonctionnement</h2>
           <ol class="function__wrap">
-            <!-- first card -->
+            <!-- card 1 -->
             <li class="function__card">
               <a href="#">
                 <span class="card-num">1</span>
@@ -58,7 +63,7 @@
                 <span class="card-body">Choisisssez un restaurant</span>
               </a>
             </li>
-            <!-- second card -->
+            <!-- card 2 -->
             <li class="function__card">
               <a href="#">
                 <span class="card-num">2</span>
@@ -66,7 +71,7 @@
                 <span class="card-body">Composez votre menu</span>
               </a>
             </li>
-            <!-- third card -->
+            <!-- card 3 -->
             <li class="function__card">
               <a href="#">
                 <span class="card-num">3</span>
@@ -81,7 +86,7 @@
           <h2>Restaurants</h2>
           <div class="restaurants__wrap">
             <!-- card 1 -->
-            <figure class="restaurants__card">
+            <figure>
               <a href="#">
                 <img
                   src="./images/la palette du gout.jpg"
@@ -99,9 +104,78 @@
               </a>
             </figure>
             <!-- card 2 -->
+            <figure>
+              <a href="#">
+                <img
+                  src="./images/la note enchantee.jpg"
+                  alt="La note enchantee"
+                />
+                <span class="restaurants__card-label">Nouveau</span>
+                <div class="restaurants__dscr">
+                  <div class="restaurants__dscr__texts">
+                    <h3>La note enchantee</h3>
+                    <span>Charonne</span>
+                  </div>
+                  <i class="fa-regular fa-heart"></i>
+                  <i class="fa-solid fa-heart"></i>
+                </div>
+              </a>
+            </figure>
+            <!-- card 3 -->
+            <figure>
+              <a href="#">
+                <img src="./images/a la francaise.jpg" alt="A la francaise" />
+                <span class="restaurants__card-label">Nouveau</span>
+                <div class="restaurants__dscr">
+                  <div class="restaurants__dscr__texts">
+                    <h3>A la francaise</h3>
+                    <span>Cite Rouge</span>
+                  </div>
+                  <i class="fa-regular fa-heart"></i>
+                  <i class="fa-solid fa-heart"></i>
+                </div>
+              </a>
+            </figure>
+            <!-- card 4 -->
+            <figure>
+              <a href="#">
+                <img
+                  src="./images/le delice des sens.jpg"
+                  alt="le delice des sens"
+                />
+                <span class="restaurants__card-label">Nouveau</span>
+                <div class="restaurants__dscr">
+                  <div class="restaurants__dscr__texts">
+                    <h3>Le delice des sens</h3>
+                    <span>Folie-Mericourt</span>
+                  </div>
+                  <i class="fa-regular fa-heart"></i>
+                  <i class="fa-solid fa-heart"></i>
+                </div>
+              </a>
+            </figure>
           </div>
         </div>
       </main>
     </div>
+    <footer>
+      <h2>ohmyfood</h2>
+      <ul>
+        <li>
+          <a href="#">
+            <i class="fa-solid fa-utensils"></i>
+            Proposer un restaurant
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="fa-solid fa-handshake-angle"></i>
+            Devenir partenaire
+          </a>
+        </li>
+        <li><a href="#">Mentions legales</a></li>
+        <li><a href="mailto: abc@example.com">Contact</a></li>
+      </ul>
+    </footer>
   </body>
 </html>

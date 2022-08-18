@@ -1,0 +1,9 @@
+@use '../abstract/variables' as *;
+@use '../abstract/mixins' as *;
+
+@mixin logo {
+    display: block;
+    width: 40%;
+    margin: 0 auto;
+    padding: $s3 0;
+}
