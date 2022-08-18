@@ -1,0 +1,36 @@
+// colors
+$color-primary : #9356DC;
+$color-hover :#f5edff;
+$color-secondary : #FF79DA;
+$color-accent : #99E2D0;
+$color-white : white;
+$color-base : black;
+$color-grey : #f6f6f6;
+$color-darkergrey : #eaeaea;
+$color-icon : #7e7e7e;
+$color-footer : #353535;
+$color-shadow : rgb(167, 167, 167);
+$color-accent-font: #008766;
+
+
+// font-families
+$ff-text : 'Roboto', sans-serif;
+$ff-logo : 'Shrikhand', cursive;
+
+//font-size / sizes
+$s-00 : 1.375rem; 
+$s-01 : 1.25rem; 
+$s-02 : 1.125rem;
+$s-03 : 1rem;
+$s-04 : 0.875rem;
+$s-05 : 0.75rem;
+
+// transitions
+$transition: all 0.2s ease-in-out;
+
+// padding 
+$side-padding: 0 $s-03;
+$padding: padding;
+
+// gradient
+$gradient: linear-gradient(220deg, rgba(147,86,220,1) 35%, rgba(255,121,218,1) 100%); 

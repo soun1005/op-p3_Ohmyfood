@@ -1,0 +1,54 @@
+@use "../abstract/variables" as *;
+
+@mixin logo {
+    display: block;
+    width: 40%;
+    margin: 0 auto;
+    padding: $s-03 0;
+}
+
+@mixin btn($padding) {
+    color: $color-white;
+    border-radius: 25px;
+    padding: $padding;
+    background-color: initial;
+    background-image: linear-gradient(-180deg, $color-secondary, $color-primary);
+    cursor: pointer;
+    display: inline-block;
+    outline: 0;
+    overflow: hidden;
+    pointer-events: auto;
+    position: relative;
+    text-align: center;
+    touch-action: manipulation;
+    user-select: none;
+    -webkit-user-select: none;
+    vertical-align: top;
+    white-space: nowrap;
+    z-index: 9;
+    border: 0;
+    font-weight: 600;
+    transition: box-shadow .2s;
+    @include shadow(1px 10px 32px -17px rgba(0,0,0,1));
+}
+
+
+
+@mixin flexbox($flex-direction:row, $justify-content, $align-items) {
+    display: flex;
+    flex-direction: $flex-direction;
+    justify-content: $justify-content;
+    align-items: $align-items;
+}
+
+
+@mixin shadow($params) {
+    box-shadow: $params;
+    -webkit-box-shadow: $params;
+    -moz-box-shadow: $params;
+}
+
+@mixin title-spacing {
+    padding: $side-padding;
+    margin: 3rem 0;
+}

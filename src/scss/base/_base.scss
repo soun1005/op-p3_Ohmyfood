@@ -1,0 +1,37 @@
+// -----------------------------------------------------------------------------
+// This file contains very basic styles.
+// -----------------------------------------------------------------------------
+@use "../abstract/variables" as *;
+
+ html {
+    box-sizing: border-box;
+    // mobile version
+    max-width: 415px;
+    margin: 0 auto;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    box-sizing: inherit;
+    list-style: none;
+  }
+  
+  body {
+    margin: 0;
+  }
+
+  /**
+   * Basic styles for links
+   */
+  a {
+    color: $color-base;
+    text-decoration: none;
+  }
+
+  h1, h2, h3, h4, ol, li {
+    margin: 0;
+    padding: 0;
+  }
+
+  
