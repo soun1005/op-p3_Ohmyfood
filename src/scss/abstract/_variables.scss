@@ -1,16 +1,16 @@
 // colors
-$color-primary : #9356DC;
-$color-hover :#f5edff;
-$color-secondary : #FF79DA;
-$color-accent : #99E2D0;
-$color-white : white;
-$color-base : black;
-$color-grey : #f6f6f6;
-$color-darkergrey : #eaeaea;
-$color-icon : #7e7e7e;
-$color-footer : #353535;
-$color-shadow : rgb(167, 167, 167);
-$color-accent-font: #008766;
+$c-primary : #9356DC;
+$c-hover :#f5edff;
+$c-secondary : #FF79DA;
+$c-accent : #99E2D0;
+$c-white : white;
+$c-base : black;
+$c-grey : #f6f6f6;
+$c-darkergrey : #eaeaea;
+$c-icon : #7e7e7e;
+$c-footer : #353535;
+$c-shadow : rgb(167, 167, 167);
+$c-accent-font: #008766;
 
 
 // font-families
@@ -18,14 +18,14 @@ $ff-text : 'Roboto', sans-serif;
 $ff-logo : 'Shrikhand', cursive;
 
 //font-size / sizes
-$s0 : 1.375rem; 
-$s1 : 1.25rem; 
-$s2 : 1.125rem;
-    // 16px
-$s3 : 1rem;
-$s4 : 0.875rem;
-$s5 : 0.75rem;
-$s6 : 0.625rem;
+$s0 : 22px; 
+$s1 : 20px; 
+$s2 : 18px;
+    // 1rem
+$s3 : 16px;
+$s4 : 14px;
+$s5 : 12px;
+$s6 : 10px;
 
 // transitions
 $transition: all 0.2s ease-in-out;

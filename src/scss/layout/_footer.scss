@@ -4,8 +4,8 @@
 footer {
     @include flexbox(column, center, baseline);
     height: 170px;
-    background-color: $color-footer;
-    color: $color-white;
+    background-color: $c-footer;
+    color: $c-white;
     padding: $side-padding;
     h2 {
         font-family: $ff-logo;
@@ -19,7 +19,7 @@ footer {
     }
 
     a {
-        color: $color-white;
+        color: $c-white;
         font-size: $s4;
     }
 }

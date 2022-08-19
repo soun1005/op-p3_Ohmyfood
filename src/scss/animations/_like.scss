@@ -1,7 +1,6 @@
-
 @use "../abstract/variables" as *;
 
-@mixin heart($top: 7px, $right: 20px) {
+@mixin heart($top: 18%, $right: 6%) {
     .fa-regular {
         position: absolute;
         right: $right;
@@ -23,6 +22,7 @@
 
     .fa-solid:hover {
         animation: heart--liked 200ms linear both;
+        cursor: pointer;
     }
 
 @keyframes heart--liked {

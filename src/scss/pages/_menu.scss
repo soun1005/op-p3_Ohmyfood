@@ -1,33 +1,123 @@
 @use '../layout/header' as *;
 @use '../abstract/variables' as *;
 @use '../animations/like' as *;
+@use '../abstract/mixins' as *;
+
+header {
+    width: 100%;
+    @include flexbox(row, none, center);
+    position: relative;
+    nav {
+        display: block;
+        position: absolute;
+        left: 5%;
+        font-size: $s2;
+    }
+}
 
 .hero {
     width: 100%;
     position: relative;
-    height: 320px;
+    height: 300px;
+    background-color: $c-grey;
     img {
         width: inherit;
-        position: absolute;
+        height: inherit;
         object-fit: cover;
-    }
-    &__title {
-        position: absolute;
-        display: flex;
-        justify-content: space-between;
-        // height: 6rem;
-        width: inherit;
-        border-radius: 35px 35px 0 0;
-        background-color: $color-grey;
-        top: 200px;
-        padding: 1.5rem 2rem;
-
-        h1 {
-            font-family: $ff-logo;
-        }
-    }
-    &__heart {
-        @include heart(33px, 27px);
+        position: relative;
     }
 }
 
+.menu {
+   
+    background-color: $c-grey;
+    position: relative;
+    z-index: 10;
+    margin-top: -73px;
+    border-radius: 35px 35px 0 0;
+
+    &__title__wrap {
+        width: inherit;
+        border-radius: 35px 35px 0 0;
+        background-color: #f6f6f6;
+        top: 200px;
+        @include flexbox(row, space-between, start);
+        padding: 7% 8%;
+
+        h1 {
+            font-family: $ff-logo;
+            font-size: 28px;
+        }
+    }    
+    
+    &__heart {
+        position: relative;
+        height: 100%;
+        width: 20%;
+        margin-top: 4px;
+        @include heart(31%, 6%);}
+
+
+    hr {
+        background-color: $c-accent;
+        border: 1.3px $c-accent solid;
+        width: 10%;
+    }
+
+    h2 {
+        font-size: $s3;
+        font-weight: 300;
+    }
+
+    hr, h2 {
+        line-height: 12px;
+    }
+
+
+    &__wrap{
+        padding: $side-padding;
+        width: inherit;
+        padding-bottom: 7.5%;
+    }
+    
+    h3 {
+        font-weight: 500;
+        font-size: $s3;
+    }
+    h4 {
+        font-weight: 300;
+        font-size: 16px;
+        margin-top: 3px;
+    }
+    span {
+        font-weight: 500;
+        font-size: 16px;
+    }
+
+    .card {
+        padding: 15px 21px 15px 10px;
+        border-radius: 15px;
+        margin: 1rem 0;
+        @include flexbox(0, space-between, flex-end);
+        @include shadow(1px 5px 25px -17px rgba(0,0,0,1));
+    }
+      &__body {
+        overflow: hidden;
+      }
+    
+
+    &__btn {
+        height: 100px;
+        margin: 0 auto;
+        @include flexbox(row, center, baseline);
+        a {
+            @include btn(15px 45px);
+            margin-top: 0;
+        }
+        a:hover {
+            @include btn-hover;
+        }
+        }
+    }
+
+  

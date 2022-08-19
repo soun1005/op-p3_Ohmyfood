@@ -2,11 +2,11 @@
 
 
 
-@mixin btn($padding) {
+@mixin btn($padding: 15px 25px) {
     margin-top: 1.375rem;
     color: #fff;
     border-radius: 25px;
-    padding: 15px 25px;
+    padding: $padding;
     background-image: linear-gradient(-180deg, #FF79DA, #9356DC);
     cursor: pointer;
     display: inline-block;
