@@ -5,6 +5,11 @@
 @use '../layout/header' as *;
 @use '../animations/like' as *;
 @use '../base/base' as *;
+@use '../components/button' as *;
+
+body {
+    position: relative;
+}
 
 header {
     img {
@@ -80,10 +85,12 @@ header {
         position: relative;
         margin-top: $s1;
         font-size: $s2;
+        transition: 0.5s;
     }
 
     a:hover {
         background-color: $c-hover;
+        transition: 0.5s;
     }
 
     i {
@@ -115,6 +122,10 @@ header {
         text-align: center;
     }
 }
+
+@media (min-width: 600px) {
+   
+  }
 
 .restaurants {
     padding: $side-padding;
@@ -170,8 +181,6 @@ header {
         
     }
 
-    
-
     &__dscr__texts {
         display: block;
         margin-top: 18px;
@@ -181,47 +190,4 @@ header {
     &__dscr__heart {
         @include heart;
     } 
-
-
-}
-
-.parent__spinner{
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background-color: $c-darkergrey;
-    z-index: 1000;
-    height: 100%;
-    width: 100%;
-    opacity:1;
-    animation: fade;
-    animation-duration: 0s;
-    animation-delay: 3000ms;
-    animation-fill-mode: forwards;
-
-    .loading__spiner{ /* loading spinner */
-        width: 32px;
-        height: 72px;
-        display: inline-block;
-        left: 5px;
-        border: 3px solid $c-base;
-        box-sizing: border-box;
-        color: $c-primary;
-        border-radius: 0 0 4px 4px;
-        margin: auto; /* place in a center*/
-        position: absolute;
-        right:0;
-        top:0;
-        bottom:0;
-        left:0;
-        transform: perspective(140px) rotateX(-45deg);
-        animation: fill 1000ms ease-in-out infinite alternate;
-      }
-}
-
-.body {
-    animation: hide-bg;
-    animation-duration: 3s;
 }

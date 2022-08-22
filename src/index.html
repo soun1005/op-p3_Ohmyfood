@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- style -->
     <link rel="stylesheet" href="../src/scss/style.css" />
+    <link rel="stylesheet" href="./scss/normalize.css" />
     <!-- google font -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -26,143 +27,143 @@
     <div class="parent__spinner">
       <div class="loading__spiner"></div>
     </div>
-
     <div class="container">
       <!-- header -->
       <header>
         <img src="./images/ohmyfood.png" alt="logo" />
       </header>
+      <div class="container">
+        <main>
+          <div class="location">
+            <i class="fa-solid fa-location-dot location-i"></i>
+            <span>Paris, Belleville</span>
+          </div>
 
-      <main>
-        <div class="location">
-          <i class="fa-solid fa-location-dot location-i"></i>
-          <span>Paris, Belleville</span>
-        </div>
+          <section class="explore">
+            <div class="explore__wrap">
+              <h1>Reservez le menu qui vous convient</h1>
+              <span>
+                Devouvrez des reaturants d'exception, selectionnes par nos soins
+              </span>
+              <div class="explore__btn">
+                <a href="#res">Explorer nos restaurants</a>
+              </div>
+            </div>
+            <!-- explore finish -->
+          </section>
 
-        <section class="explore">
-          <div class="explore__wrap">
-            <h1>Reservez le menu qui vous convient</h1>
-            <span>
-              Devouvrez des reaturants d'exception, selectionnes par nos soins
-            </span>
-            <div class="explore__btn">
-              <a href="#">Explorer nos restaurants</a>
+          <div class="function">
+            <h2>Fonctionnement</h2>
+            <ol class="function__wrap">
+              <!-- card 1 -->
+              <li class="function__card">
+                <a href="#">
+                  <span class="card-num">1</span>
+                  <i class="fa-solid fa-mobile-screen"></i>
+                  <span class="card-body">Choisisssez un restaurant</span>
+                </a>
+              </li>
+              <!-- card 2 -->
+              <li class="function__card">
+                <a href="#">
+                  <span class="card-num">2</span>
+                  <i class="fa-solid fa-list"></i>
+                  <span class="card-body">Composez votre menu</span>
+                </a>
+              </li>
+              <!-- card 3 -->
+              <li class="function__card">
+                <a href="#">
+                  <span class="card-num">3</span>
+                  <i class="fa-solid fa-store"></i>
+                  <span class="card-body">Degustez au restaurant</span>
+                </a>
+              </li>
+            </ol>
+          </div>
+
+          <div class="restaurants" id="res">
+            <h2>Restaurants</h2>
+            <div class="restaurants__wrap">
+              <!-- card 1 -->
+              <figure>
+                <a href="./la-palette-du-gout.html">
+                  <img
+                    src="./images/la palette du gout.jpg"
+                    alt="La palette du gout"
+                  />
+                  <span class="restaurants__card-label">Nouveau</span>
+                  <div class="restaurants__dscr">
+                    <div class="restaurants__dscr__texts">
+                      <h3>La palette du gout</h3>
+                      <span>Menilmontant</span>
+                    </div>
+                    <div class="restaurants__dscr__heart">
+                      <i class="fa-regular fa-heart"></i>
+                      <i class="fa-solid fa-heart"></i>
+                    </div>
+                  </div>
+                </a>
+              </figure>
+              <!-- card 2 -->
+              <figure>
+                <a href="#">
+                  <img
+                    src="./images/la note enchantee.jpg"
+                    alt="La note enchantee"
+                  />
+                  <span class="restaurants__card-label">Nouveau</span>
+                  <div class="restaurants__dscr">
+                    <div class="restaurants__dscr__texts">
+                      <h3>La note enchantee</h3>
+                      <span>Charonne</span>
+                    </div>
+                    <div class="restaurants__dscr__heart">
+                      <i class="fa-regular fa-heart"></i>
+                      <i class="fa-solid fa-heart"></i>
+                    </div>
+                  </div>
+                </a>
+              </figure>
+              <!-- card 3 -->
+              <figure>
+                <a href="#">
+                  <img src="./images/a la francaise.jpg" alt="A la francaise" />
+                  <div class="restaurants__dscr">
+                    <div class="restaurants__dscr__texts">
+                      <h3>A la francaise</h3>
+                      <span>Cite Rouge</span>
+                    </div>
+                    <div class="restaurants__dscr__heart">
+                      <i class="fa-regular fa-heart"></i>
+                      <i class="fa-solid fa-heart"></i>
+                    </div>
+                  </div>
+                </a>
+              </figure>
+              <!-- card 4 -->
+              <figure>
+                <a href="#">
+                  <img
+                    src="./images/le delice des sens.jpg"
+                    alt="le delice des sens"
+                  />
+                  <div class="restaurants__dscr">
+                    <div class="restaurants__dscr__texts">
+                      <h3>Le delice des sens</h3>
+                      <span>Folie-Mericourt</span>
+                    </div>
+                    <div class="restaurants__dscr__heart">
+                      <i class="fa-regular fa-heart"></i>
+                      <i class="fa-solid fa-heart"></i>
+                    </div>
+                  </div>
+                </a>
+              </figure>
             </div>
           </div>
-          <!-- explore finish -->
-        </section>
-
-        <div class="function">
-          <h2>Fonctionnement</h2>
-          <ol class="function__wrap">
-            <!-- card 1 -->
-            <li class="function__card">
-              <a href="#">
-                <span class="card-num">1</span>
-                <i class="fa-solid fa-mobile-screen"></i>
-                <span class="card-body">Choisisssez un restaurant</span>
-              </a>
-            </li>
-            <!-- card 2 -->
-            <li class="function__card">
-              <a href="#">
-                <span class="card-num">2</span>
-                <i class="fa-solid fa-list"></i>
-                <span class="card-body">Composez votre menu</span>
-              </a>
-            </li>
-            <!-- card 3 -->
-            <li class="function__card">
-              <a href="#">
-                <span class="card-num">3</span>
-                <i class="fa-solid fa-store"></i>
-                <span class="card-body">Degustez au restaurant</span>
-              </a>
-            </li>
-          </ol>
-        </div>
-
-        <div class="restaurants">
-          <h2>Restaurants</h2>
-          <div class="restaurants__wrap">
-            <!-- card 1 -->
-            <figure>
-              <a href="#">
-                <img
-                  src="./images/la palette du gout.jpg"
-                  alt="La palette du gout"
-                />
-                <span class="restaurants__card-label">Nouveau</span>
-                <div class="restaurants__dscr">
-                  <div class="restaurants__dscr__texts">
-                    <h3>La palette du gout</h3>
-                    <span>Menilmontant</span>
-                  </div>
-                  <div class="restaurants__dscr__heart">
-                    <i class="fa-regular fa-heart"></i>
-                    <i class="fa-solid fa-heart"></i>
-                  </div>
-                </div>
-              </a>
-            </figure>
-            <!-- card 2 -->
-            <figure>
-              <a href="#">
-                <img
-                  src="./images/la note enchantee.jpg"
-                  alt="La note enchantee"
-                />
-                <span class="restaurants__card-label">Nouveau</span>
-                <div class="restaurants__dscr">
-                  <div class="restaurants__dscr__texts">
-                    <h3>La note enchantee</h3>
-                    <span>Charonne</span>
-                  </div>
-                  <div class="restaurants__dscr__heart">
-                    <i class="fa-regular fa-heart"></i>
-                    <i class="fa-solid fa-heart"></i>
-                  </div>
-                </div>
-              </a>
-            </figure>
-            <!-- card 3 -->
-            <figure>
-              <a href="#">
-                <img src="./images/a la francaise.jpg" alt="A la francaise" />
-                <div class="restaurants__dscr">
-                  <div class="restaurants__dscr__texts">
-                    <h3>A la francaise</h3>
-                    <span>Cite Rouge</span>
-                  </div>
-                  <div class="restaurants__dscr__heart">
-                    <i class="fa-regular fa-heart"></i>
-                    <i class="fa-solid fa-heart"></i>
-                  </div>
-                </div>
-              </a>
-            </figure>
-            <!-- card 4 -->
-            <figure>
-              <a href="#">
-                <img
-                  src="./images/le delice des sens.jpg"
-                  alt="le delice des sens"
-                />
-                <div class="restaurants__dscr">
-                  <div class="restaurants__dscr__texts">
-                    <h3>Le delice des sens</h3>
-                    <span>Folie-Mericourt</span>
-                  </div>
-                  <div class="restaurants__dscr__heart">
-                    <i class="fa-regular fa-heart"></i>
-                    <i class="fa-solid fa-heart"></i>
-                  </div>
-                </div>
-              </a>
-            </figure>
-          </div>
-        </div>
-      </main>
+        </main>
+      </div>
     </div>
     <footer>
       <h2>ohmyfood</h2>

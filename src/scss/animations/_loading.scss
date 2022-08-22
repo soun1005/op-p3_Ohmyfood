@@ -1,37 +1,83 @@
-@keyframes fill {
-    /* filling the cup */
-      0% {
-        box-shadow: 0 0  inset;
-        visibility:visible;
-      }
+@use "../abstract/variables" as *;
+@use "../abstract/mixins" as *;
 
-      100%{
-        box-shadow: 0 -70px inset;
-        visibility:visible;
-      }
-  }
+
+.parent__spinner{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: $c-grey;
+  z-index: 1000;
+  height: 100%;
+  width: 100%;
+  opacity:1;
+  animation: fade;
+  animation-duration: 0s;
+  animation-delay: 3000ms;
+  animation-fill-mode: forwards;
+  opacity: 0.9;
+
+  .loading__spiner{ /* loading spinner */
+    width: 32px;
+    height: 72px;
+    display: inline-block;
+    left: 5px;
+    border: 3px solid $c-base;
+    box-sizing: border-box;
+    color: $c-accent;
+    border-radius: 0 0 4px 4px;
+    margin: auto;
+    position: fixed;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    transform: perspective(140px) rotateX(-45deg);
+    animation: fill 1000ms ease-in-out infinite alternate;
+    }
+}
+
+.body {
+  animation: hide-bg;
+  animation-duration: 3s;
+}
+
+@keyframes fill {
+  /* filling the cup */
+    0% {
+      box-shadow: 0 0  inset;
+      visibility:visible;
+    }
+
+    100%{
+      box-shadow: 0 -70px inset;
+      visibility:visible;
+    }
+}
 
 @keyframes fade {
 /* fading effects */
-    from{
-        opacity:1;
-        display: block;
-    }
-    to{
-        opacity:0;
-        z-index:-100;
-        display:none;
-        height:0;
-        width:0;
-        display: none;
-    }
-        }
-    
+  from{
+      opacity:1;
+      display: block;
+  }
+  to{
+      opacity:0;
+      z-index:-100;
+      display:none;
+      height:0;
+      width:0;
+      display: none;
+  }
+      }
+  
 @keyframes hide-bg {
-    from{
-        overflow:hidden;
-    }
-    to{
-        overflow:visible;
-    }
-        }
+  from{
+      overflow:hidden;
+  }
+  to{
+      overflow:visible;
+  }
+      }

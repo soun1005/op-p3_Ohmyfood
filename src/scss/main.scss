@@ -1,16 +1,8 @@
-@use "./abstract/mixins";
-@use "./abstract/variables";
-
-@use "./animations/like";
-@use "./animations/loading";
-
-@use "./base/base";
-@use "./components/button";
-
-@use "./layout/card";
-@use "./layout/footer";
-@use "./layout/header";
+@use "./animations";
+@use "./base";
+@use "./components";
+@use "./layout";
+@use "./pages";
 
 
-@use "./pages/home";
-@use "./pages/menu";
+

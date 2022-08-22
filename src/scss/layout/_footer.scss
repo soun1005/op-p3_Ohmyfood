@@ -3,10 +3,10 @@
 
 footer {
     @include flexbox(column, center, baseline);
-    height: 170px;
+    // no fixed height
+    padding: 24px 22px;
     background-color: $c-footer;
     color: $c-white;
-    padding: $side-padding;
     h2 {
         font-family: $ff-logo;
         font-size: $s2;

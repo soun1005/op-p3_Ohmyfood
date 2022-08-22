@@ -2,37 +2,32 @@
 // This file contains very basic styles.
 // -----------------------------------------------------------------------------
 @use "../abstract/variables" as *;
-
- html {
-    box-sizing: border-box;
-    // mobile version
-    max-width: 415px;
-    margin: 0 auto;
-  }
   
-  *,
-  *::before,
-  *::after {
-    box-sizing: inherit;
+  * {
+    box-sizing: border-box;
     list-style: none;
   }
-  
-  body {
-    margin: 0;
+
+  .container {
+    max-width: 1400px;
+    margin: 0 auto;
     font-family: $ff-text;
   }
 
-  /**
-   * Basic styles for links
-   */
   a {
     color: $c-base;
     text-decoration: none;
   }
 
-  h1, h2, h3, h4, ol, ul, li, figure {
+  h1, h2, h3, h4 {
     margin: 0;
+  }
+
+  ul {
+    margin: 0;
+  }
+
+  ol, ul, li, figure {
     padding: 0;
   }
 
-  

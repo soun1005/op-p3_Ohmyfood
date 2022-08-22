@@ -2,6 +2,7 @@
 @use '../abstract/variables' as *;
 @use '../animations/like' as *;
 @use '../abstract/mixins' as *;
+@use '../components/button' as *;
 
 header {
     width: 100%;
