@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- style -->
     <link rel="stylesheet" href="../src/scss/style.css" />
+    <link rel="stylesheet" href="./scss/normalize.css" />
     <!-- google font -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -28,7 +29,9 @@
         <nav>
           <a href="./index.html"><i class="fa-solid fa-arrow-left"></i></a>
         </nav>
-        <img src="./images/ohmyfood.png" alt="logo" />
+        <a href="./index.html">
+          <img src="./images/ohmyfood.png" alt="logo" />
+        </a>
       </header>
       <main>
         <figure class="hero">
@@ -52,7 +55,7 @@
             <!-- 1st group -->
             <h2>ENTREES</h2>
             <hr align="left" />
-            <div class="menu-card__wrap">
+            <div class="menu__card-container entree">
               <!-- card 1 -->
               <a href="#" class="card">
                 <div class="card__body">
@@ -83,7 +86,7 @@
           <div class="menu__wrap">
             <h2>PLATS</h2>
             <hr align="left" />
-            <div class="menu-card__wrap">
+            <div class="menu__card-container plat">
               <!-- card 1 -->
               <a href="#" class="card">
                 <div class="card__body">
@@ -114,7 +117,7 @@
           <div class="menu__wrap">
             <h2>DESSERTS</h2>
             <hr align="left" />
-            <div class="menu-card__wrap">
+            <div class="menu__card-container dessert">
               <!-- card 1 -->
               <a href="#" class="card">
                 <div class="card__body">
@@ -150,7 +153,9 @@
     <!-- end of container -->
     <!-- footer -->
     <footer>
-      <h2>ohmyfood</h2>
+      <a href="./index.html">
+        <h2>ohmyfood</h2>
+      </a>
       <ul>
         <li>
           <a href="#">

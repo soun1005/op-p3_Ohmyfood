@@ -1,8 +1,6 @@
 // -----------------------------------------------------------------------------
 // This file contains very basic styles.
-// -----------------------------------------------------------------------------
-@use "../abstract/variables" as *;
-  
+// -----------------------------------------------------------------------------  
   * {
     box-sizing: border-box;
     list-style: none;
@@ -10,8 +8,8 @@
 
   .container {
     max-width: 1400px;
-    margin: 0 auto;
     font-family: $ff-text;
+    margin: 0 auto;
   }
 
   a {
@@ -19,11 +17,7 @@
     text-decoration: none;
   }
 
-  h1, h2, h3, h4 {
-    margin: 0;
-  }
-
-  ul {
+  h1, h2, h3, h4, figure, ul {
     margin: 0;
   }
 

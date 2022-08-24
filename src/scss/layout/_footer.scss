@@ -1,17 +1,20 @@
-@use '../abstract/variables' as *;
-@use '../abstract/mixins' as *;
-
 footer {
-    @include flexbox(column, center, baseline);
-    // no fixed height
     padding: 24px 22px;
     background-color: $c-footer;
     color: $c-white;
+    &__wrap {
+        max-width: 1400px;
+    }
     h2 {
         font-family: $ff-logo;
         font-size: $s2;
+        display: block;
         margin-bottom: 10px;
         font-weight: lighter;
+        &:hover {
+            @include hover-scale(scale(1.2), 0.3s);
+        }
+        
     }
 
     li {

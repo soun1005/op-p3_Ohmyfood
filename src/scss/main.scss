@@ -1,8 +1,12 @@
-@use "./animations";
-@use "./base";
-@use "./components";
-@use "./layout";
-@use "./pages";
-
-
-
+@import "./abstract/mixins", 
+        "./abstract/variables",
+        "./animations/like",
+        "./animations/loading",
+        "./animations/menu-effect",
+        "./base/base",
+        "./components/button",
+        "./components/restaurant-card",
+        "./layout/footer",
+        "./layout/header",
+        "./pages/home",
+        "./pages/menu";

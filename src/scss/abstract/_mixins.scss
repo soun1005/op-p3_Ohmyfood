@@ -1,5 +1,3 @@
-@use "../abstract/variables" as *;
-
 @mixin flexbox($flex-direction:row, $justify-content, $align-items) {
     display: flex;
     flex-direction: $flex-direction;
@@ -11,4 +9,22 @@
     box-shadow: $params;
     -webkit-box-shadow: $params;
     -moz-box-shadow: $params;
+}
+
+@mixin logo {
+    display: block;
+    width: 8rem;
+    height: auto;
+    margin: 0 auto;
+    padding: $s3 0;
+    transition: 0.5s;
+    &:hover {
+        @include hover-scale;
+    }
+}
+
+@mixin hover-scale($transform:scale(1.2), $transition: 0.5s) {
+        transform: $transform;
+        transition: $transition;
+        cursor: pointer;
 }
