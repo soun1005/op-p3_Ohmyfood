@@ -77,14 +77,52 @@
     }
 
     .card {
-        padding: 15px 21px 15px 10px;
+           /* padding: 15px 21px 15px 10px; */
         border-radius: 15px;
         margin: 1rem 0;
-        @include flexbox(0, space-between, flex-end);
-        @include shadow(1px 5px 25px -17px rgba(0,0,0,1));
-        
+        display: flex;
+        flex-direction: 0;
+        justify-content: space-between;
+        align-items: flex-end;
+        box-shadow: 1px 5px 25px -17px #000;
+        -webkit-box-shadow: 1px 5px 25px -17px #000;
+        -moz-box-shadow: 1px 5px 25px -17px #000;
         position: relative;
-        
+        height: 4rem;
+        padding: 10px;
+        transition: 400ms;
+        overflow: hidden;
+
+
+    // &:hover > &__checked {
+    //     background-color: green;
+    //     animation: appear 1.5s ease-out forwards;
+    //     transition: 1s;
+    //     display: block;
+    // }
+
+    &__checked {
+        color: white;
+        background-color: $c-accent;
+        width: 60px;
+        height: 4rem;
+        position: absolute;
+        top: 0;
+        right: 0;
+        font-size: 23px;
+        // display: flex;
+        // align-items: center;
+        // justify-content: center;
+        display: none;
+        background-color: yellow;
+        i {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: inherit;
+        }
+    }
+
     }
 
       &__body {
@@ -106,7 +144,43 @@
         }
     }
 
-  
+    .card:hover > .card__checked {
+        background-color: $c-accent;
+        animation: appear ease-out 500ms forwards;
+        transition: 200ms;
+        display: block;
+      }
+    .card:hover .fa-circle-check {
+        animation: icon-rotate 500ms ease-out both reverse;
+      }
+
+    @keyframes appear {
+        from {
+          transform: translateX(30px);
+          transition: 1s;
+        }
+        to {
+          transform: translateX(0px);
+          transition: 1s;
+        }
+      }
+
+    @keyframes icon-rotate {
+        from {
+        transform: rotate(0);
+        }
+        to {
+        transform: rotate(360deg);
+        }
+        } 
+//   @keyframes checked {
+//     from {
+//         transform: translateX(-100px);
+//     }
+//     to {
+//         transform: translateX(30px);
+//     }
+//   }
 
 // @keyframes item-container {
 //     0% {
