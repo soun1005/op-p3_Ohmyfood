@@ -1,7 +1,7 @@
+// Menu appearance
 .entree {
     animation: menu-ani 800ms both;
     animation-delay: 200ms;
-    
 }
 .plat {
     animation: menu-ani 1200ms both;
@@ -22,3 +22,40 @@
         opacity: 1;
       }
 }
+
+// Menu hover
+.card__wrap:hover{
+    margin-right: 60px;
+    transition: 500ms;
+}
+
+.card:hover > .card__checked {
+background-color: $c-accent;
+animation: appear ease-out 500ms forwards;
+transition: 100ms;
+display: block;
+}
+
+.card:hover .fa-circle-check {
+animation: icon-rotate 500ms ease-out both reverse;
+}
+
+@keyframes appear {
+    from {
+      transform: translateX(30px);
+      transition: 1s;
+    }
+    to {
+      transform: translateX(0px);
+      transition: 1s;
+    }
+  }
+
+@keyframes icon-rotate {
+    from {
+    transform: rotate(0);
+    }
+    to {
+    transform: rotate(360deg);
+    }
+    } 

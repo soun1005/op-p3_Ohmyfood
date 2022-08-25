@@ -10,11 +10,12 @@ header {
     nav {
         display: block;
         position: absolute;
-        left: 5%;
         font-size: $s2;
     }
     a {
         display: block;
         width: 100%;
+        padding: 0 1rem;
     }
-}
+    }
+

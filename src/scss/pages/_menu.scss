@@ -1,3 +1,4 @@
+// hero img
 .hero {
     width: 100%;
     position: relative;
@@ -18,6 +19,7 @@
     margin-top: -73px;
     border-radius: 35px 35px 0 0;
 
+    
     &__title__wrap {
         width: inherit;
         border-radius: 35px 35px 0 0;
@@ -28,7 +30,7 @@
 
         h1 {
             font-family: $ff-logo;
-            font-size: 28px;
+            font-size: 26px;
         }
     }    
     
@@ -37,13 +39,13 @@
         height: 100%;
         width: 20%;
         margin-top: 4px;
-        @include heart(14px, 0px);}
-
+        @include heart(14px, 0px);
+    }
 
     hr {
         background-color: $c-accent;
         border: 1.3px $c-accent solid;
-        width: 10%;
+        width: 2rem;
     }
 
     h2 {
@@ -89,17 +91,8 @@
         -moz-box-shadow: 1px 5px 25px -17px #000;
         position: relative;
         height: 4rem;
-        padding: 10px;
         transition: 400ms;
         overflow: hidden;
-
-
-    // &:hover > &__checked {
-    //     background-color: green;
-    //     animation: appear 1.5s ease-out forwards;
-    //     transition: 1s;
-    //     display: block;
-    // }
 
     &__checked {
         color: white;
@@ -116,19 +109,23 @@
         display: none;
         background-color: yellow;
         i {
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            @include flexbox(0, center, center);
             height: inherit;
+            }
+    }
+
+    &__body {
+        overflow: hidden;
+        white-space: nowrap;
+        h3, h4 {
+            text-overflow: ellipsis;
+            overflow: hidden;
+            }
+        span {
+            margin-right: 10px;
+        }
         }
     }
-
-    }
-
-      &__body {
-        overflow: hidden;
-      }
-    
 
     &__btn {
         height: 100px;
@@ -137,58 +134,58 @@
         a {
             @include btn(15px 45px);
             margin-top: 0;
-        }
+            }
         a:hover {
             @include btn-hover;
+            }
         }
-        }
+    
+}
+
+    .card__wrap {
+        display: flex;
+        justify-content: space-between;
+        align-items: end;
+        transition: 1s;
+        padding: 10px;
+        // overflow: hidden;
+        width: 100%;
+        height: 4rem;
+        // text-overflow: ellipsis;
+        overflow: hidden;
+        // white-space: nowrap;
     }
 
-    .card:hover > .card__checked {
-        background-color: $c-accent;
-        animation: appear ease-out 500ms forwards;
-        transition: 200ms;
-        display: block;
-      }
-    .card:hover .fa-circle-check {
-        animation: icon-rotate 500ms ease-out both reverse;
+      .card__body {
+        width: 80%;
       }
 
-    @keyframes appear {
-        from {
-          transform: translateX(30px);
-          transition: 1s;
-        }
-        to {
-          transform: translateX(0px);
-          transition: 1s;
-        }
-      }
+@media (min-width: 600px) {
+   
+   
 
-    @keyframes icon-rotate {
-        from {
-        transform: rotate(0);
-        }
-        to {
-        transform: rotate(360deg);
-        }
-        } 
-//   @keyframes checked {
-//     from {
-//         transform: translateX(-100px);
-//     }
-//     to {
-//         transform: translateX(30px);
-//     }
-//   }
+    .menu {
+        border-radius: 0;
+        margin-top: 0;
 
-// @keyframes item-container {
-//     0% {
-//         // transform: translateY(-500%);
-//       opacity: 0;
-//     }
-//   100% {
-//     // transform: translateY(0);
-//     opacity: 1;
-//   }
-// }
+
+
+        &__title__wrap{
+            padding: 8% 3%;
+            align-items: flex-start;
+        }
+
+
+        &__heart .fa-regular , .fa-solid {
+           top: 4px;
+        }
+        h1 {
+            font-size: 35px;
+            margin: 0;
+           }
+
+        &__btn {
+            height: 118px;
+        }
+    }
+}

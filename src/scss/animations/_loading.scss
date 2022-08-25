@@ -3,8 +3,6 @@
   animation-duration: 3s;
 }
 
-
-
 .parent__spinner{
   position: absolute;
   display: flex;
@@ -19,22 +17,22 @@
   width: 100%;
   animation: fade;
   animation-duration: 0s;
-  animation-delay: 2900ms;
+  animation-delay: 2800ms;
   animation-fill-mode: forwards;
 
-  .loading__spiner{ /* loading spinner */
-    top: 300px;
+  .loading__spiner{ 
+    top: 50%;
     opacity: 1;
     position: fixed;
     font-family: 'Shrikhand', cursive;
-    font-size: 8rem;
-     color: $c-accent;
-     text-shadow: 6px 6px 0px $c-white;
+    font-size: 3rem;
+    color: $c-accent;
+    text-shadow: 6px 6px 0px $c-white;
     letter-spacing: 2px;
    
-     animation:falling 1s cubic-bezier(0.680, -0.550, 0.265, 1.550) forwards,
-             rotating 1s ease-in-out 1s both,
-            falling 1s cubic-bezier(0.680, -0.550, 0.265, 1.550) 2s reverse;
+     animation:falling 1.5s cubic-bezier(0.680, -0.550, 0.265, 1.550) forwards,
+             rotating 600ms ease-in-out 1.6s both,
+            falling 1s cubic-bezier(0.680, -0.550, 0.265, 1.550) 2.1s reverse;
     }
 }
 
@@ -43,7 +41,6 @@
         1% { opacity: 1; top: -400px; }
       100% { opacity: 1; top:  300px; } 
 }
-
 
 @keyframes rotating {
   0% {
@@ -72,146 +69,12 @@
   }
   }
   
-   
-      
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// .parent__spinner{
-//   position: absolute;
-//   display: flex;
-//   justify-content: center;
-//   top: 0;
-//   bottom: 0;
-//   left: 0;
-//   right: 0;
-//   background-color: rgba(167, 167, 167, 0.80);
-//   z-index: 1000;
-//   height: 100%;
-//   width: 100%;
-//   // opacity: 0.8;
-//   animation: fade;
-//   animation-duration: 0s;
-//   animation-delay: 3000ms;
-//   animation-fill-mode: forwards;
-
-//   .loading__spiner{ /* loading spinner */
-//     margin-top: 140px;
-//     opacity: 1;
-//     position: fixed;
-//     font-family: 'Shrikhand', cursive;
-//     font-size: 100px;
-//       color: #9356DC;
-//     font-weight: 900;
-//     letter-spacing: 7px;
-//     -webkit-animation: loading-text 1.5s cubic-bezier(0.680, -0.550, 0.265, 1.550) 0.5s forwards;
-//             animation: loading-text 1.5s cubic-bezier(0.680, -0.550, 0.265, 1.550) 0.5s forwards;
-
-    // older version
-    // width: 32px;
-    // height: 72px;
-    // display: inline-block;
-    // left: 5px;
-    // border: 3px solid $c-base;
-    // box-sizing: border-box;
-    // color: $c-accent;
-    // border-radius: 0 0 4px 4px;
-    // margin: auto;
-    // position: fixed;
-    // right: 0;
-    // top: 0;
-    // bottom: 0;
-    // left: 0;
-    // transform: perspective(140px) rotateX(-45deg);
-    // animation: fill 1000ms ease-in-out infinite alternate;
-//     }
-// }
-
-
-// @keyframes loading-text {
-//   0% {
-//     -webkit-transform: translateY(0);
-//             // transform: translateY(0);
-//             transform: rotate(0);
-//     -webkit-transform-origin: 50% 50%;
-//             transform-origin: 50% 50%;
-//     text-shadow: none;
-//   }
-//   100% {
-//     -webkit-transform: translateY(200px);
-//     transform: rotate(0);
-//             // transform: translateY(200px);
-//     -webkit-transform-origin: 50% 50%;
-//             transform-origin: 50% 50%;
-//     text-shadow: 0 1px 0 #99E2D0, 0 2px 0 #99E2D0, 0 3px 0 #99E2D0, 0 4px 0 #99E2D0, 0 5px 0 #99E2D0, 0 6px 0 #99E2D0, 0 7px 0 #99E2D0, 0 8px 0 #99E2D0, 0 9px 0 #99E2D0, 0 50px 30px rgba(0, 0, 0, 0.3);
-//   }
-// }
-
-
-// /* webkit */
-// @-webkit-keyframes loading-text {
-//   0% {
-//     -webkit-transform: translateY(0);
-//             transform: translateY(0);
-//     -webkit-transform-origin: 50% 50%;
-//             transform-origin: 50% 50%;
-//     text-shadow: none;
-//   }
-//   100% {
-//     -webkit-transform: translateY(50px);
-//             transform: translateY(50px);
-//     -webkit-transform-origin: 50% 50%;
-//             transform-origin: 50% 50%;
-//     text-shadow: 0 1px 0 #99E2D0, 0 2px 0 #99E2D0, 0 3px 0 #99E2D0, 0 4px 0 #99E2D0, 0 5px 0 #99E2D0, 0 6px 0 #99E2D0, 0 7px 0 #99E2D0, 0 8px 0 #99E2D0, 0 9px 0 #99E2D0, 0 50px 30px rgba(0, 0, 0, 0.3);
-//   }
-// }
-
-
-
-// older version
-// @keyframes fill {
-//   /* filling the cup */
-//     0% {
-//       box-shadow: 0 0  inset;
-//       visibility:visible;
-//     }
-
-//     100%{
-//       box-shadow: 0 -70px inset;
-//       visibility:visible;
-//     }
-// }
+  @media (min-width: 600px) {
+    .parent__spinner{
+      .loading__spiner{ 
+        font-size: 6rem;
+    }
+  } }
 
 @keyframes fade {
 /* fading effects */

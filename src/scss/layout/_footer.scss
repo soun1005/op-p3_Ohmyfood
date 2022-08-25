@@ -23,6 +23,34 @@ footer {
 
     a {
         color: $c-white;
-        font-size: $s4;
+        font-size: 12px;
     }
 }
+
+@media (min-width: 600px) {
+    footer {
+        padding: 2.5rem 0;
+       .container{
+            gap: 2rem;
+            @include flexbox(row, space-between, center);
+            padding: $side-padding;
+        }
+        ul {
+            display: flex;
+            gap: 1rem;
+        }
+
+
+        li, h2 {
+            margin-bottom: 0;
+        }
+        
+        
+        a {
+            // font-size: 11px;
+        }
+
+        }
+    }
+    
+   
