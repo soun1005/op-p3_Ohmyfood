@@ -16,12 +16,16 @@
         background-clip: text;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
+        &:hover {
+            animation: heart--liked 300ms ease-out both;
+            cursor: pointer;
+        }
     }
 
-    .fa-solid:hover {
-        animation: heart--liked 300ms ease-out both;
-        cursor: pointer;
-    }
+    // .fa-solid:hover {
+    //     animation: heart--liked 300ms ease-out both;
+    //     cursor: pointer;
+    // }
 
 @keyframes heart--liked {
     10% {

@@ -16,13 +16,13 @@
   animation-fill-mode: forwards;
 
   &__spiner{ 
-    top: 50%;
-    opacity: 1;
+    // top: 70%;
+    // opacity: 1;
     position: fixed;
     font-family: 'Shrikhand', cursive;
     font-size: 3rem;
     color: $c-accent;
-    text-shadow: 6px 6px 0px $c-white;
+    text-shadow: 5px 3px 0px $c-white;
     letter-spacing: 2px;
    
      animation:falling 1.5s cubic-bezier(0.680, -0.550, 0.265, 1.550) forwards,
@@ -41,7 +41,7 @@
 @keyframes falling {
   0% { opacity: 0; top: -400px; }
   1% { opacity: 1; top: -400px; }
-  100% { opacity: 1; top:  300px; } 
+  100% { opacity: 1; top:  45%; } 
 }
 
 @keyframes rotating {
