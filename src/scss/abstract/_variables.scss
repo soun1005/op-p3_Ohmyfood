@@ -17,7 +17,7 @@ $c-accent-font: #008766;
 $ff-text : 'Roboto', sans-serif;
 $ff-logo : 'Shrikhand', cursive;
 
-//font-size / sizes
+// sizes
 $s0 : 22px; 
 $s1 : 20px; 
 $s2 : 18px;
@@ -35,4 +35,6 @@ $side-padding: 0 $s0;
 $padding: padding;
 
 // gradient
-$gradient: linear-gradient(220deg, rgba(147,86,220,1) 35%, rgba(255,121,218,1) 100%); 
+$gradient: linear-gradient(220deg, 
+                            rgba(147,86,220,1) 35%, 
+                            rgba(255,121,218,1) 100%); 

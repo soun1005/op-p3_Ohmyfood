@@ -21,13 +21,12 @@ body {
 
 @media (min-width: 600px) {
     header {
-            
             padding: 20px 0;
             img {
                 margin: 0 auto;
                 width: 120px;
             }
-       }
+    }
 }
 
 // explore and function
@@ -41,8 +40,8 @@ body {
     }
 
     a {
-        margin-top: $s0;
         @include btn(15px 25px);
+        margin-top: $s0;
     }
 
     a:hover {
@@ -64,7 +63,7 @@ body {
         display: inline-block;
         position: absolute;
         left: 82px;
-        font-size: $s3;
+        font-size: 16px;
         font-weight: 500;
     }
 
@@ -74,7 +73,7 @@ body {
         font-size: 15px;
         display: inline-block;
         padding: 3px;
-        color: white;
+        color: $c-white;
         border-radius: 100%;
         background-color: $c-primary;
         position: absolute;
@@ -105,7 +104,7 @@ body {
 
     a:hover {
         background-color: $c-hover;
-        transition: 0.5s;
+        @include hover-scale(scale(1.02), 0.2s);
     }
 
     i {
@@ -116,13 +115,8 @@ body {
     }
 }
 @media (min-width: 600px) {
-   
-
    .explore {
         flex-basis: 66%;
-        &__wrap {
-            // background-color: white;
-        }
     }
    .function {
         flex-basis: 33%;

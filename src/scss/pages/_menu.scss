@@ -12,13 +12,13 @@
     }
 }
 
+// menu start
 .menu {
     background-color: $c-grey;
     position: relative;
     z-index: 10;
     margin-top: -73px;
     border-radius: 35px 35px 0 0;
-
     
     &__title__wrap {
         width: inherit;
@@ -66,7 +66,7 @@
     
     h3 {
         font-weight: 500;
-        font-size: $s3;
+        font-size: 16px;
     }
     h4 {
         font-weight: 300;
@@ -79,16 +79,11 @@
     }
 
     .card {
-           /* padding: 15px 21px 15px 10px; */
+        @include flexbox(column, space-between, flex-end);
+        flex-direction: 0;
         border-radius: 15px;
         margin: 1rem 0;
-        display: flex;
-        flex-direction: 0;
-        justify-content: space-between;
-        align-items: flex-end;
-        box-shadow: 1px 5px 25px -17px #000;
-        -webkit-box-shadow: 1px 5px 25px -17px #000;
-        -moz-box-shadow: 1px 5px 25px -17px #000;
+        @include shadow(1px 5px 25px -17px #000);
         position: relative;
         height: 4rem;
         transition: 400ms;
@@ -103,11 +98,7 @@
         top: 0;
         right: 0;
         font-size: 23px;
-        // display: flex;
-        // align-items: center;
-        // justify-content: center;
         display: none;
-        background-color: yellow;
         i {
             @include flexbox(0, center, center);
             height: inherit;
@@ -123,7 +114,7 @@
             }
         span {
             margin-right: 10px;
-        }
+            }
         }
     }
 
@@ -139,43 +130,28 @@
             @include btn-hover;
             }
         }
-    
-}
-
-    .card__wrap {
-        display: flex;
-        justify-content: space-between;
-        align-items: end;
-        transition: 1s;
-        padding: 10px;
-        // overflow: hidden;
-        width: 100%;
-        height: 4rem;
-        // text-overflow: ellipsis;
-        overflow: hidden;
-        // white-space: nowrap;
     }
 
+    .card__wrap {
+        @include flexbox(row, space-between, end);
+        transition: 1s;
+        padding: 10px;
+        width: 100%;
+        height: 4rem;
+        overflow: hidden;
+    }
       .card__body {
         width: 80%;
       }
 
 @media (min-width: 600px) {
-   
-   
-
     .menu {
         border-radius: 0;
         margin-top: 0;
-
-
-
         &__title__wrap{
             padding: 8% 3%;
             align-items: flex-start;
         }
-
-
         &__heart .fa-regular , .fa-solid {
            top: 4px;
         }
@@ -183,7 +159,6 @@
             font-size: 35px;
             margin: 0;
            }
-
         &__btn {
             height: 118px;
         }

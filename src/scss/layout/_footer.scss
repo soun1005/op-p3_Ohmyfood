@@ -12,11 +12,16 @@ footer {
         margin-bottom: 10px;
         font-weight: lighter;
         &:hover {
-            @include hover-scale(scale(1.2), 0.3s);
+            @include hover-scale(scale(1.02), 0.3s);
+            color: $c-primary;
         }
-        
+        // &::after {
+        //     content: "";
+        //     width: 20px;
+        //     height: 2px;
+        //     background-color: $c-accent;
+        // }
     }
-
     li {
         margin-bottom: 5px;
     }
@@ -25,32 +30,28 @@ footer {
         color: $c-white;
         font-size: 12px;
     }
+    a:hover {
+        color: $c-accent;
+    }
 }
 
 @media (min-width: 600px) {
     footer {
         padding: 2.5rem 0;
        .container{
-            gap: 2rem;
             @include flexbox(row, space-between, center);
+            gap: 2rem;
             padding: $side-padding;
         }
         ul {
             display: flex;
             gap: 1rem;
         }
-
-
         li, h2 {
             margin-bottom: 0;
         }
-        
-        
-        a {
-            // font-size: 11px;
-        }
 
-        }
     }
+}
     
    

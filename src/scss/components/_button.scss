@@ -1,4 +1,5 @@
 @mixin btn($padding: 15px 25px) {
+    @include shadow(1px 10px 32px -17px rgba(0,0,0,1));
     margin-top: 1.375rem;
     color: #fff;
     border-radius: 25px;
@@ -8,15 +9,15 @@
     display: inline-block;
     background-color: initial;
     overflow: hidden;
-    @include shadow(1px 10px 32px -17px rgba(0,0,0,1));
     transition: 0.3s;
 }
 
 @mixin btn-hover{
     @include shadow(3px 8px 28px 4px rgba(0,0,0,0.31));
+    @include hover-scale(scale(1.05), 0.3s);
     background: rgb(195,149,250);
     background: linear-gradient(183deg, #ff94e1, #a978e3 100%);
-    @include hover-scale(scale(1.05), 0.3s);
-    
+   
+
 }
 

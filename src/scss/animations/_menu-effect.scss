@@ -23,21 +23,27 @@
       }
 }
 
+
 // Menu hover
-.card__wrap:hover{
+
+.card__wrap span {
+  transition: 200ms;
+}
+
+.card__wrap:hover > span {
     margin-right: 60px;
-    transition: 500ms;
+    transition: 200ms;
 }
 
 .card:hover > .card__checked {
 background-color: $c-accent;
-animation: appear ease-out 500ms forwards;
+animation: appear linear 200ms forwards;
 transition: 100ms;
 display: block;
 }
 
 .card:hover .fa-circle-check {
-animation: icon-rotate 500ms ease-out both reverse;
+animation: icon-rotate 200ms linear both reverse;
 }
 
 @keyframes appear {
@@ -58,4 +64,4 @@ animation: icon-rotate 500ms ease-out both reverse;
     to {
     transform: rotate(360deg);
     }
-    } 
+} 

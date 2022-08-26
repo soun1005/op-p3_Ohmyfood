@@ -15,16 +15,15 @@
         width: 100%;
         height: auto;
         margin-bottom: $s2;
-        
     }
 
     a {
+        @include shadow(1px 5px 25px -17px rgba(0,0,0,1));
         display: block;
         height: 265px;
         margin: 0 auto;
         position: relative;
         border-radius: 0 0 15px 15px; 
-        @include shadow(1px 5px 25px -17px rgba(0,0,0,1));
         transition: 0.6s;
         &:hover {
             @include hover-scale(scale(1.1), 0.5s);
@@ -68,7 +67,6 @@
     } 
 }
 
-
 @media (min-width: 600px) {
     .restaurants {
         padding: 0 0 4rem 0;
@@ -79,14 +77,11 @@
             padding: 50px 0;
         }
     &__wrap {
-        display: flex;
-        flex-direction: row;
+        @include flexbox(row, space-between, 0);
         flex-wrap: wrap;
-        // gap: 6%;
-        justify-content: space-between;
-    }
+        }
     figure {
         flex-basis: 49%;
-    }
+        }
     }
 }

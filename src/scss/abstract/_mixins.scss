@@ -11,6 +11,7 @@
     -moz-box-shadow: $params;
 }
 
+// logo in the header
 @mixin logo {
     display: block;
     width: 8rem;
