@@ -1,46 +1,64 @@
-// Menu clicked(mobile version)
-.card__checked {
-    color: white;
-    background-color: $c-accent;
-    height: 71.78px;
-    width: 106px;
-    font-size: 23px;
-    display: none;
-      i {
-        @include flexbox(0, center, center);
-        height: inherit;
-      }
+@keyframes appear {
+  from {
+    transform: translateX(50px);
+    transition: 1s;
+  }
+  to {
+    transform: translateX(0px);
+    transition: 1s;
+  }
   }
   
-  .card__price {
-    transition: 200ms;
+@keyframes icon-rotate {
+  from {
+  transform: rotate(0);
   }
+  to {
+  transform: rotate(360deg);
+  }
+} 
+  
 
+// keyframes
+@keyframes appear {
+  from {
+    transform: translateX(30px);
+    transition: 1s;
+  }
+  to {
+    transform: translateX(0px);
+    transition: 1s;
+  }
+}
 
-// for 'radio' input
-$class-name: '#entree', '#plat', '#dessert';
-@each $class-name in $class-name {
-    @for $i from 1 through 3 {
-    // input display none
-    #{$class-name}-radio-#{$i} {
-        display: none;
-        // checkbox appearing animation
-        &:checked ~ .card__checked {
-            // background-color: white;
-            display: block;
-            animation: appear linear 200ms forwards;
-            transition: 100ms;
-            // icon in checkbox rotating animation
-            & > .fa-circle-check {
-                animation: icon-rotate 150ms linear both reverse;
-                }
-        }
-        &:checked ~ .card__price {
-            transition: 200ms;
+@keyframes icon-rotate {
+  from {
+  transform: rotate(0);
+  }
+  to {
+  transform: rotate(360deg);
+  }
+} 
+
+// Menu hover (desktop version)
+@media (min-width: 600px) {
+  .card {
+      &:hover > .card__checked {
+          background-color: $c-accent;
+          animation: appear linear 200ms forwards;
+          transition: 100ms;
+          display: block;
           }
-      } 
+      &:hover .fa-circle-check {
+          animation: icon-rotate 200ms linear both reverse;
+          }
+
+      &__wrap:hover > span {
+          margin-right: 60px;
+          transition: 200ms;
+      }
   }
-  }
+}
 
 // ------last version------
 //   @for $i from 1 through 3 {
@@ -95,66 +113,3 @@ $class-name: '#entree', '#plat', '#dessert';
 //     }
 //   }
 
-
-  // keyframes
-  @keyframes appear {
-    from {
-      transform: translateX(50px);
-      transition: 1s;
-    }
-    to {
-      transform: translateX(0px);
-      transition: 1s;
-    }
-  }
-  
-  @keyframes icon-rotate {
-    from {
-    transform: rotate(0);
-    }
-    to {
-    transform: rotate(360deg);
-    }
-  } 
-  
-  // Menu hover (desktop version)
-  @media (min-width: 600px) {
-  
-    .card {
-        &:hover > .card__checked {
-            background-color: $c-accent;
-            animation: appear linear 200ms forwards;
-            transition: 100ms;
-            display: block;
-            }
-        &:hover .fa-circle-check {
-            animation: icon-rotate 200ms linear both reverse;
-            }
-
-        &__wrap:hover > span {
-            margin-right: 60px;
-            transition: 200ms;
-        }
-    }
-
-// keyframes
-  @keyframes appear {
-      from {
-        transform: translateX(30px);
-        transition: 1s;
-      }
-      to {
-        transform: translateX(0px);
-        transition: 1s;
-      }
-    }
-  
-  @keyframes icon-rotate {
-      from {
-      transform: rotate(0);
-      }
-      to {
-      transform: rotate(360deg);
-      }
-  } 
-  }

@@ -36,7 +36,7 @@
 
     <main>
       <figure class="hero">
-        <img src="./images/la palette du gout.jpg" alt="la palette du gout" />
+        <img src="./images/la-palette-du-gout.jpg" alt="la palette du gout" />
       </figure>
 
       <!-- white background body without hero img -->
@@ -46,10 +46,13 @@
           <div class="menu__title">
             <h1>La palette du goût</h1>
           </div>
-          <div class="menu__heart">
-            <i class="fa-regular fa-heart"></i>
-            <i class="fa-solid fa-heart"></i>
-          </div>
+          <label for="menu-heart" class="label-heart">
+            <input type="checkbox" id="menu-heart" />
+            <span class="heart__checked">
+              <i class="fa-regular fa-heart"></i>
+              <i class="fa-solid fa-heart heart--clicked"></i>
+            </span>
+          </label>
         </div>
 
         <!-- <div class="menu container"> ->변경 menu__body로 -->
@@ -59,32 +62,35 @@
           <div class="menu__container">
             <!-- 1st group -->
             <h2>ENTREES</h2>
-            <hr align="left" />
             <div class="menu__card-container entree">
               <!-- card 1 -->
               <label for="entree-radio-1" id="entree-label-1" class="card">
                 <input type="radio" id="entree-radio-1" name="entree" />
                 <span class="card__body">
-                  <h3>Fricassée d'escargot</h3>
-                  <h4>Au piment d'Espelette</h4>
+                  <span class="card__body-title">Fricassée d'escargot</span>
+                  <span class="card__body-dscr">Au piment d'Espelette</span>
                 </span>
                 <span class="card__price">25€</span>
-                <div class="card__checked">
+                <span class="card__checked">
                   <i class="fa-solid fa-circle-check"></i>
-                </div>
+                </span>
               </label>
 
               <!-- card 2 -->
               <label for="entree-radio-2" id="entree-label-2" class="card">
                 <input type="radio" id="entree-radio-2" name="entree" />
                 <span class="card__body">
-                  <h3>Foie gras de canard mi-cuit</h3>
-                  <h4>Et ses copeaux de truffe noire</h4>
+                  <span class="card__body-title">
+                    Foie gras de canard mi-cuit
+                  </span>
+                  <span class="card__body-dscr">
+                    Et ses copeaux de truffe noire
+                  </span>
                 </span>
                 <span class="card__price">35€</span>
-                <div class="card__checked">
+                <span class="card__checked">
                   <i class="fa-solid fa-circle-check"></i>
-                </div>
+                </span>
               </label>
 
               <!-- card 3 -->
@@ -92,103 +98,117 @@
               <label for="entree-radio-3" id="entree-label-3" class="card">
                 <input type="radio" id="entree-radio-3" name="entree" />
                 <span class="card__body">
-                  <h3>Oeuf au plat</h3>
-                  <h4>Assaisonné à la truffe sur lit de caviar</h4>
+                  <span class="card__body-title">Oeuf au plat</span>
+                  <span class="card__body-dscr">
+                    Assaisonné à la truffe sur lit de caviar
+                  </span>
                 </span>
                 <span class="card__price">20€</span>
-                <div class="card__checked">
+                <span class="card__checked">
                   <i class="fa-solid fa-circle-check"></i>
-                </div>
+                </span>
               </label>
             </div>
           </div>
           <!-- 2nd group -->
           <div class="menu__container">
             <h2>PLATS</h2>
-            <hr align="left" />
             <div class="menu__card-container plat">
               <!-- card 1 -->
               <label for="plat-radio-1" id="plat-label-1" class="card">
                 <input type="radio" id="plat-radio-1" name="plat" />
                 <span class="card__body">
-                  <h3>Filet de boeuf aux herbes</h3>
-                  <h4>Accompagné de sa ribambelle de légumes</h4>
+                  <span class="card__body-title">
+                    Filet de boeuf aux herbes
+                  </span>
+                  <span class="card__body-dscr">
+                    Accompagné de sa ribambelle de légumes
+                  </span>
                 </span>
                 <span class="card__price">40€</span>
-                <div class="card__checked">
+                <span class="card__checked">
                   <i class="fa-solid fa-circle-check"></i>
-                </div>
+                </span>
               </label>
 
               <!-- card 2 -->
               <label for="plat-radio-2" id="plat-label-2" class="card">
                 <input type="radio" id="plat-radio-2" name="plat" />
                 <span class="card__body">
-                  <h3>Parmentier de queue de boeuf</h3>
-                  <h4>À la truffe noire sur sa purée de panais</h4>
+                  <span class="card__body-title">
+                    Parmentier de queue de boeuf
+                  </span>
+                  <span class="card__body-dscr">
+                    À la truffe noire sur sa purée de panais
+                  </span>
                 </span>
                 <span class="card__price">35€</span>
-                <div class="card__checked">
+                <span class="card__checked">
                   <i class="fa-solid fa-circle-check"></i>
-                </div>
+                </span>
               </label>
 
               <!-- card 3 -->
               <label for="plat-radio-3" id="plat-label-3" class="card">
                 <input type="radio" id="plat-radio-3" name="plat" />
                 <span class="card__body">
-                  <h3>Filet de turbot</h3>
-                  <h4>Aux agrumes</h4>
+                  <span class="card__body-title">Filet de turbot</span>
+                  <span class="card__body-dscr">Aux agrumes</span>
                 </span>
                 <span class="card__price">44€</span>
-                <div class="card__checked">
+                <span class="card__checked">
                   <i class="fa-solid fa-circle-check"></i>
-                </div>
+                </span>
               </label>
             </div>
           </div>
           <!-- 3rd group -->
           <div class="menu__container">
             <h2>DESSERTS</h2>
-            <hr align="left" />
             <div class="menu__card-container dessert">
               <!-- card 1 -->
               <label for="dessert-radio-1" id="dessert-label-1" class="card">
                 <input type="radio" id="dessert-radio-1" name="dessert" />
                 <span class="card__body">
-                  <h3>Paris-Brest</h3>
-                  <h4>Revisité</h4>
+                  <span class="card__body-title">Paris-Brest</span>
+                  <span class="card__body-dscr">Revisité</span>
                 </span>
                 <span class="card__price">18€</span>
-                <div class="card__checked">
+                <span class="card__checked">
                   <i class="fa-solid fa-circle-check"></i>
-                </div>
+                </span>
               </label>
 
               <!-- card 2 -->
               <label for="dessert-radio-2" id="dessert-label-2" class="card">
                 <input type="radio" id="dessert-radio-2" name="dessert" />
                 <span class="card__body">
-                  <h3>Macaron au chocolat d'exception</h3>
-                  <h4>Et glace à la vanille de Madagascar</h4>
+                  <span class="card__body-title">
+                    Macaron au chocolat d'exception
+                  </span>
+                  <span class="card__body-dscr">
+                    Et glace à la vanille de Madagascar
+                  </span>
                 </span>
                 <span class="card__price">22€</span>
-                <div class="card__checked">
+                <span class="card__checked">
                   <i class="fa-solid fa-circle-check"></i>
-                </div>
+                </span>
               </label>
 
               <!-- card 3 -->
               <label for="dessert-radio-3" id="dessert-label-3" class="card">
                 <input type="radio" id="dessert-radio-3" name="dessert" />
                 <span class="card__body">
-                  <h3>Mousse au chocolat</h3>
-                  <h4>Au piment d'Espelette et à la truffe noire</h4>
+                  <span class="card__body-title">Mousse au chocolat</span>
+                  <span class="card__body-dscr">
+                    Au piment d'Espelette et à la truffe noire
+                  </span>
                 </span>
                 <span class="card__price">23€</span>
-                <div class="card__checked">
+                <span class="card__checked">
                   <i class="fa-solid fa-circle-check"></i>
-                </div>
+                </span>
               </label>
             </div>
           </div>

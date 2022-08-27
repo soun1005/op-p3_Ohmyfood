@@ -1,33 +1,18 @@
-@mixin heart($top: 7px, $right: 22px) {
-    .fa-regular {
-        position: absolute;
-        right: $right;
-        top: $top;
-        font-size: 26px;
+$class-name: '#restaurant';
+@each $class-name in $class-name {
+@for $i from 1 through 4 {
+// input display none
+#{$class-name}-heart-#{$i}, #menu-heart {
+    display: none;
+    &:checked ~ .heart__checked .fa-solid {
+        animation: heart 300ms ease-out both;
     }
+} 
+}
+} 
 
-    .fa-solid {
-        position: absolute;
-        right: $right;
-        top: $top;
-        font-size: 26px;
-        opacity: 0;
-        background: $gradient;
-        background-clip: text;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        &:hover {
-            animation: heart--liked 300ms ease-out both;
-            cursor: pointer;
-        }
-    }
 
-    // .fa-solid:hover {
-    //     animation: heart--liked 300ms ease-out both;
-    //     cursor: pointer;
-    // }
-
-@keyframes heart--liked {
+@keyframes heart {
     10% {
         opacity: 0.1;
         transform: scale(1);
@@ -54,5 +39,4 @@
         transform:rotate(360deg);
         transform: scale(1)
     }
-}
 }

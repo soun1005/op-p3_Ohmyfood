@@ -25,21 +25,18 @@
         @include flexbox(row, space-between, start);
         border-radius: 35px 35px 0 0;
         background-color: #f6f6f6;
-        top: 200px;
-        padding: 7% 8%;
+        top: 0;
+        padding: 2rem;
+        position: relative;
+        @include heart(51px, 13px, 0);
+        .label-heart {
+            right: 10%;
+        }
     h1 {
         font-family: $ff-logo;
         font-size: 26px;
     }
     }    
-    // 'like' heart
-    &__heart {
-        position: relative;
-        height: 100%;
-        width: 20%;
-        margin-top: 4px;
-        @include heart(14px, 0px);
-    }
 
     hr {
         background-color: $c-accent;
@@ -51,6 +48,7 @@
         font-size: $s3;
         font-weight: 300;
     }
+
 
     hr, h2 {
         line-height: 12px;
@@ -70,18 +68,17 @@
         }
     }
 
-    .card__wrap {
-        @include flexbox(row, space-between, end);
-        transition: 1s;
-        padding: 10px;
-        width: 100%;
-        height: 4rem;
-        overflow: hidden;
-    }
-      .card__body {
-        width: 80%;
-      }
+//     // 'like' heart
+//    #menu-heart {
+//         position: relative;
+//         height: 100%;
+//         width: 20%;
+//         margin-top: 4px;
+//         @include heart;
+//     }
 
+
+// desktop version
 @media (min-width: 600px) {
     .menu {
         border-radius: 0;
