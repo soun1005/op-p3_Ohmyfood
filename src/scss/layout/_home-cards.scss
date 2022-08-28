@@ -20,6 +20,7 @@
         height: auto;
         margin-bottom: $s2;
         position: relative;
+        border-radius: 15px;
     }
 
     a {
@@ -28,11 +29,12 @@
         height: 265px;
         margin: 0 auto;
         position: relative;
-        border-radius: 0 0 15px 15px; 
+        border-radius: 15px; 
         transition: 0.6s;
         &:hover {
-            @include hover-scale(scale(1.1), 0.5s);
+            @include shadow(-1px 3px 20px 0px rgba(153,226,208,0.90));
         }
+
     }
 
     img {

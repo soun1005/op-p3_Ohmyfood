@@ -16,8 +16,6 @@
   animation-fill-mode: forwards;
 
   &__spiner{ 
-    // top: 70%;
-    // opacity: 1;
     position: fixed;
     font-family: 'Shrikhand', cursive;
     font-size: 3rem;
@@ -25,9 +23,9 @@
     text-shadow: 5px 3px 0px $c-white;
     letter-spacing: 2px;
    
-     animation:falling 1.5s cubic-bezier(0.680, -0.550, 0.265, 1.550) forwards,
-             rotating 600ms ease-in-out 1.6s both,
-            falling 1s cubic-bezier(0.680, -0.550, 0.265, 1.550) 2.1s reverse;
+     animation:falling 1.3s cubic-bezier(0.680, -0.550, 0.265, 1.550) forwards,
+             rotating 400ms ease-in-out 1.3s both,
+            falling 1.3s cubic-bezier(0.680, -0.550, 0.265, 1.550) 1.7s reverse;
     }
 }
 

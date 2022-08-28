@@ -1,0 +1,83 @@
+// mixins
+// mixin heart used in : home.scss, menu.scss
+@mixin heart($bottom:10%, $right:12%, $icon-bottom: 6%) {
+    .label-heart{
+        height: inherit;
+        height: 30px;
+        bottom: $bottom;
+        right: $right;
+        display: block;
+        position: absolute;
+    }
+    //filled heart icon
+    .heart--clicked {
+        opacity: 0;
+        background: $gradient;
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    // container of two heart icons
+    .heart__checked {
+        position: relative;
+        height: inherit;
+        display: block;
+    }
+    // two heart icons from font-awesome
+    .fa-heart {
+        position: absolute;
+        font-size: 1.6rem;
+        bottom: $icon-bottom;
+    }
+}
+
+// heart animation in 'home-cards'
+$class-name: '#restaurant';
+@each $class-name in $class-name {
+@for $i from 1 through 4 {
+// input display none
+#{$class-name}-heart-#{$i}, #menu-heart {
+    display: none;
+    // checked when clicked(mobile version)
+    &:checked ~ .heart__checked .fa-solid {
+        animation: heart 300ms ease-out both;
+    }
+    // checked when hover(desktop version)
+    @media (min-width: 600px) {
+        &:hover ~ .heart__checked .fa-solid {
+            animation: heart 300ms ease-out both;
+        }
+    }
+} 
+}
+} 
+
+// keyframes
+@keyframes heart {
+    10% {
+        opacity: 0.1;
+        transform: scale(1);
+    }
+    
+    30% {
+        opacity: 0.3;
+        transform: scale(1.8);
+        
+    }
+
+    50% {
+        opacity: 0.5;
+        transform: scale(1.5);
+    }
+
+    70% {
+        opacity: 0.7;
+        transform: scale(1.2);
+    }
+
+    100% {
+        opacity: 1;
+        transform:rotate(360deg);
+        transform: scale(1.1)
+    }
+}

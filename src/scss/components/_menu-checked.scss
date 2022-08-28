@@ -1,0 +1,64 @@
+@keyframes appear {
+  from {
+    transform: translateX(30px);
+    transition: 1s;
+  }
+  to {
+    transform: translateX(0px);
+    transition: 1s;
+  }
+}
+
+@keyframes icon-rotate {
+  from {
+  transform: rotate(0);
+  }
+  to {
+  transform: rotate(360deg);
+  }
+} 
+
+// for 'radio' input
+$class-name: '#entree', '#plat', '#dessert';
+@each $class-name in $class-name {
+    @for $i from 1 through 3 {
+    // input display none
+        #{$class-name}-radio-#{$i} {
+            display: none;
+
+            // checkbox appearing animation
+            &:checked ~ .card__checked {
+                display: block;
+                animation: appear linear 200ms forwards;
+                transition: 100ms;
+                // icon in checkbox rotating animation
+                & > .fa-circle-check {
+                    animation: icon-rotate 150ms linear both reverse;
+                    }
+            }
+            &:checked ~ .card__price {
+                transition: 200ms;
+            }
+        } 
+    }
+} 
+
+// Menu hover (desktop version)
+@media (min-width: 600px) {
+  .card {
+      &:hover > .card__checked {
+          background-color: $c-accent;
+          animation: appear linear 200ms forwards;
+          transition: 100ms;
+          display: block;
+          }
+      &:hover .fa-circle-check {
+          animation: icon-rotate 200ms linear both reverse;
+          }
+
+      &__wrap:hover > span {
+          margin-right: 60px;
+          transition: 200ms;
+      }
+  }
+}

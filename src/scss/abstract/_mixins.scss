@@ -11,7 +11,7 @@
     -moz-box-shadow: $params;
 }
 
-// logo in the header
+// logo in the headers
 @mixin logo {
     display: block;
     width: 8rem;
@@ -28,48 +28,4 @@
         transform: $transform;
         transition: $transition;
         cursor: pointer;
-}
-
-@mixin heart($bottom:10%, $right:7%, $icon-bottom: 6%) {
-    .label-heart{
-        width: 7%;
-        // display: block;
-        height: inherit;
-        // position: absolute;
-        height: 30px;
-        bottom: $bottom;
-        right: $right;
-        display: block;
-        position: absolute;
-    }
-    //filled heart icon
-    .heart--clicked {
-        opacity: 0;
-        background: $gradient;
-        background-clip: text;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-    }
-    // container of two heart icons
-    .heart__checked {
-        position: relative;
-        height: inherit;
-        display: block;
-    }
-    // two heart icons from font-awesome
-    .fa-heart {
-        position: absolute;
-        font-size: 1.6rem;
-        bottom: $icon-bottom;
-    }
-
-    @media (min-width: 600px) {
-        .heart--clicked:hover {
-            animation: heart--liked 300ms ease-out both;
-            cursor: pointer;
-        }
-
-    }
-
-
 }

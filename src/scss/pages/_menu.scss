@@ -12,48 +12,149 @@
     }
 }
 
-// menu start
+
 .menu {
+// menu container
     background-color: $c-grey;
     position: relative;
     z-index: 10;
     margin-top: -73px;
     border-radius: 35px 35px 0 0;
-    
-    // menu title and 'like'
+
+    @media (min-width: 600px) {
+        align-items: flex-start;
+        border-radius: 0;
+        margin-top: 0;
+    }
+
+    // title under hero img
     &__title__wrap {
         @include flexbox(row, space-between, start);
         border-radius: 35px 35px 0 0;
         background-color: #f6f6f6;
         top: 0;
-        padding: 2rem;
+        padding: 33px 22px;
         position: relative;
-        @include heart(51px, 13px, 0);
-        .label-heart {
-            right: 10%;
+        // heart checkbox
+        @include heart(35px, 55px, 0);
+        // heart checkbox -> hover in desktop version
+        @media (min-width: 600px) {
+            @include heart(69px, 55px, 0);
+            &:hover ~ .heart__checked .fa-solid {
+                animation: heart 300ms ease-out both;
+            }
+            padding: 4rem 2rem;
+            align-items: flex-start;
         }
-    h1 {
-        font-family: $ff-logo;
-        font-size: 26px;
-    }
-    }    
-
-    hr {
-        background-color: $c-accent;
-        border: 1.3px $c-accent solid;
-        width: 2rem;
     }
 
-    h2 {
-        font-size: $s3;
+    // name of restaurant
+    &__title {
+        width: 85%;
+        h1 {
+            font-family: $ff-logo;
+            font-size: 24px;
+            display: block;
+            width: 100%;
+            margin: 0;
+            @media (min-width: 600px) {
+                font-size: 35px;
+                margin: 0;
+                
+            }
+        }    
+
+    }
+    //  cards container by entree/plat/dessert
+    &__container {
+        padding: $side-padding;
+        width: inherit;
+        padding-bottom: 7.5%;
+        padding-top: 1rem;
+        // entree/plat/dessert with underlines
+        h2 {
+        font-size: 1rem;
         font-weight: 300;
-    }
-
-
-    hr, h2 {
         line-height: 12px;
+        }
+        // h2::after {
+        //     border-bottom: 3px $c-accent solid;
+        //     width: 36px;
+        //     margin-top: 0px;
+        //     padding-bottom: 5px;
+        // }
     }
 
+        // each cards inside entree/plat/dessert
+        // html <label> = .card      
+    
+    .card {
+        @include flexbox(row, none, self-end);
+        @include shadow(1px 5px 25px -17px #000);
+        border-radius: 15px;
+        margin: 1rem 0;
+        // position: relative;
+        transition: 400ms;
+        overflow: hidden;
+
+        &__wrap {
+            @include flexbox(row, space-between, end);
+            transition: 1s;
+            padding: 10px;
+            width: 100%;
+            height: 4rem;
+            overflow: hidden;
+        }
+
+        // card__price
+        &__price {
+            display: block;
+            padding: 1rem 0.5rem;
+            transition: 200ms;
+            font-size: 14px;
+        }
+
+        // menu names 
+        &__body {
+            overflow: hidden;
+            white-space: nowrap;
+            width: 100%;
+            padding: 1rem;
+            display: block;
+            
+                // title and description of the menu cards
+                &-title, 
+                &-dscr {
+                    text-overflow: ellipsis;
+                    overflow: hidden;
+                    display: block;
+                    }
+                &-title {
+                    font-size: 1.2rem;
+                }
+                &-dscr {
+                    font-size: 14px;
+                    font-weight: 300;
+                }
+            }
+            
+        &__checked{
+            color: white;
+            background-color: $c-accent;
+            height: 74.3px;
+            width: 106px;
+            font-size: 23px;
+            display: none;
+            @media (min-width: 600px) {
+                top: 4px;
+            }
+            i {
+                @include flexbox(0, center, center);
+                height: inherit;
+            }
+        }
+    }
+    // commander button
     &__btn {
         height: 100px;
         margin: 0 auto;
@@ -65,37 +166,8 @@
         a:hover {
             @include btn-hover;
             }
-        }
-    }
-
-//     // 'like' heart
-//    #menu-heart {
-//         position: relative;
-//         height: 100%;
-//         width: 20%;
-//         margin-top: 4px;
-//         @include heart;
-//     }
-
-
-// desktop version
-@media (min-width: 600px) {
-    .menu {
-        border-radius: 0;
-        margin-top: 0;
-        &__title__wrap{
-            padding: 4rem 2rem;
-            align-items: flex-start;
-        }
-        &__heart .fa-regular , .fa-solid {
-           top: 4px;
-        }
-        h1 {
-            font-size: 35px;
-            margin: 0;
-           }
-        &__btn {
+        @media (min-width: 600px) {
             height: 118px;
         }
-    }
-}
+        }
+}   
