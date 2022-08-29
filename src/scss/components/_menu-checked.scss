@@ -43,6 +43,26 @@ $class-name: '#entree', '#plat', '#dessert';
     }
 } 
 
+// 4th card in the menu of 'La note enchantee'
+    // input display none
+    #entree-radio-4 {
+      display: none;
+
+      // checkbox appearing animation
+      &:checked ~ .card__checked {
+          display: block;
+          animation: appear linear 200ms forwards;
+          transition: 100ms;
+          // icon in checkbox rotating animation
+          & > .fa-circle-check {
+              animation: icon-rotate 150ms linear both reverse;
+              }
+      }
+      &:checked ~ .card__price {
+          transition: 200ms;
+      }
+  }
+
 // Menu hover (desktop version)
 @media (min-width: 600px) {
   .card {

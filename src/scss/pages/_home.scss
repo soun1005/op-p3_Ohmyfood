@@ -60,7 +60,7 @@ body {
     }
 }
     .card-body {
-        font-size: 16px;
+        font-size: 14px;
         font-weight: 500;
         margin-left: 1rem;
     }
@@ -95,7 +95,7 @@ body {
             width: 32%;
         }
     }
-    
+
     h2 {
         margin: $s3*2 0;
         font-size: $s1;
@@ -112,6 +112,10 @@ body {
         margin-top: $s1;
         font-size: $s2;
         transition: 0.5s;
+    }
+
+    .card-body {
+        font-size: 14px;
     }
 
     a:hover {

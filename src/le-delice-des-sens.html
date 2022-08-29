@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- style -->
+    <link rel="stylesheet" href="scss/style.css" />
+    <link rel="stylesheet" href="scss/normalize.css" />
+    <!-- google font -->
+    <link rel="preconnect" href="//fonts.googleapis.com" />
+    <link rel="preconnect" href="//fonts.gstatic.com" crossorigin />
+    <link
+      href="//fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Shrikhand&display=swap"
+      rel="stylesheet"
+    />
+    <!-- font awesome -->
+    <script
+      src="https://kit.fontawesome.com/b38e917b9e.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Le delice des sens</title>
+  </head>
+  <body>
+    <!-- header -->
+    <header>
+      <nav>
+        <a href="./index.html"><i class="fa-solid fa-arrow-left"></i></a>
+      </nav>
+      <a href="./index.html">
+        <img src="./images/ohmyfood.png" alt="logo" />
+      </a>
+    </header>
+
+    <main>
+      <figure class="hero">
+        <img src="./images/le-delice-des-sens.jpg" alt="le delice des sens" />
+      </figure>
+
+      <!-- white background body without hero img -->
+      <div class="menu">
+        <!-- title with 'like' -->
+        <div class="menu__title__wrap container">
+          <div class="menu__title">
+            <h1>Le délice des sens</h1>
+          </div>
+          <label for="menu-heart" class="label-heart">
+            <input type="checkbox" id="menu-heart" />
+            <span class="heart__checked">
+              <i class="fa-regular fa-heart"></i>
+              <i class="fa-solid fa-heart heart--clicked"></i>
+            </span>
+          </label>
+        </div>
+
+        <div class="menu__body container">
+          <!-- menu start -->
+          <div class="menu__container">
+            <!-- 1st group -->
+            <h2 class="menu__container-title">Entrées</h2>
+            <div class="menu__card-container entree">
+              <!-- card 1 -->
+              <label for="entree-radio-1" id="entree-label-1" class="card">
+                <input type="radio" id="entree-radio-1" name="entree" />
+                <span class="card__body">
+                  <span class="card__body-title">Tartare de thon</span>
+                  <span class="card__body-dscr">Assaisonné au yuzu</span>
+                </span>
+                <span class="card__price">25€</span>
+                <span class="card__checked">
+                  <i class="fa-solid fa-circle-check"></i>
+                </span>
+              </label>
+
+              <!-- card 2 -->
+              <label for="entree-radio-2" id="entree-label-2" class="card">
+                <input type="radio" id="entree-radio-2" name="entree" />
+                <span class="card__body">
+                  <span class="card__body-title">
+                    Bouchée de homard croustillant
+                  </span>
+                  <span class="card__body-dscr">
+                    Et sa farandole de petits légumes
+                  </span>
+                </span>
+                <span class="card__price">35€</span>
+                <span class="card__checked">
+                  <i class="fa-solid fa-circle-check"></i>
+                </span>
+              </label>
+
+              <!-- card 3 -->
+              <label for="entree-radio-3" id="entree-label-3" class="card">
+                <input type="radio" id="entree-radio-3" name="entree" />
+                <span class="card__body">
+                  <span class="card__body-title">Velouté de cèpes</span>
+                  <span class="card__body-dscr">Aux truffes</span>
+                </span>
+                <span class="card__price">20€</span>
+                <span class="card__checked">
+                  <i class="fa-solid fa-circle-check"></i>
+                </span>
+              </label>
+            </div>
+          </div>
+          <!-- 2nd group -->
+          <div class="menu__container">
+            <h2>Plats</h2>
+            <div class="menu__card-container plat">
+              <!-- card 1 -->
+              <label for="plat-radio-1" id="plat-label-1" class="card">
+                <input type="radio" id="plat-radio-1" name="plat" />
+                <span class="card__body">
+                  <span class="card__body-title">
+                    Poulet rôti aux herbes de Provence
+                  </span>
+                  <span class="card__body-dscr">Et sa crème de truffe</span>
+                </span>
+                <span class="card__price">40€</span>
+                <span class="card__checked">
+                  <i class="fa-solid fa-circle-check"></i>
+                </span>
+              </label>
+
+              <!-- card 2 -->
+              <label for="plat-radio-2" id="plat-label-2" class="card">
+                <input type="radio" id="plat-radio-2" name="plat" />
+                <span class="card__body">
+                  <span class="card__body-title">Langouste rôtie</span>
+                  <span class="card__body-dscr">Et ses légumes de saison</span>
+                </span>
+                <span class="card__price">35€</span>
+                <span class="card__checked">
+                  <i class="fa-solid fa-circle-check"></i>
+                </span>
+              </label>
+
+              <!-- card 3 -->
+              <label for="plat-radio-3" id="plat-label-3" class="card">
+                <input type="radio" id="plat-radio-3" name="plat" />
+                <span class="card__body">
+                  <span class="card__body-title">Côte de boeuf Angus</span>
+                  <span class="card__body-dscr">Et sa purée de panais</span>
+                </span>
+                <span class="card__price">44€</span>
+                <span class="card__checked">
+                  <i class="fa-solid fa-circle-check"></i>
+                </span>
+              </label>
+            </div>
+          </div>
+          <!-- 3rd group -->
+          <div class="menu__container">
+            <h2>Desserts</h2>
+            <div class="menu__card-container dessert">
+              <!-- card 1 -->
+              <label for="dessert-radio-1" id="dessert-label-1" class="card">
+                <input type="radio" id="dessert-radio-1" name="dessert" />
+                <span class="card__body">
+                  <span class="card__body-title">Farandole de desserts</span>
+                  <span class="card__body-dscr">Du chef</span>
+                </span>
+                <span class="card__price">18€</span>
+                <span class="card__checked">
+                  <i class="fa-solid fa-circle-check"></i>
+                </span>
+              </label>
+
+              <!-- card 2 -->
+              <label for="dessert-radio-2" id="dessert-label-2" class="card">
+                <input type="radio" id="dessert-radio-2" name="dessert" />
+                <span class="card__body">
+                  <span class="card__body-title">Crème brulée</span>
+                  <span class="card__body-dscr">Revisitée</span>
+                </span>
+                <span class="card__price">22€</span>
+                <span class="card__checked">
+                  <i class="fa-solid fa-circle-check"></i>
+                </span>
+              </label>
+
+              <!-- card 3 -->
+              <label for="dessert-radio-3" id="dessert-label-3" class="card">
+                <input type="radio" id="dessert-radio-3" name="dessert" />
+                <span class="card__body">
+                  <span class="card__body-title">Tiramisu</span>
+                  <span class="card__body-dscr">À la noisette</span>
+                </span>
+                <span class="card__price">23€</span>
+                <span class="card__checked">
+                  <i class="fa-solid fa-circle-check"></i>
+                </span>
+              </label>
+            </div>
+          </div>
+          <div class="menu__btn">
+            <a href="#">
+              <button>Commander</button>
+            </a>
+          </div>
+        </div>
+      </div>
+    </main>
+    <!-- end of container -->
+
+    <!-- footer -->
+    <footer>
+      <div class="footer__wrap container">
+        <a href="./index.html">
+          <h2>ohmyfood</h2>
+        </a>
+        <ul>
+          <li>
+            <a href="#">
+              <i class="fa-solid fa-utensils"></i>
+              Proposer un restaurant
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="fa-solid fa-handshake-angle"></i>
+              Devenir partenaire
+            </a>
+          </li>
+          <li><a href="#">Mentions legales</a></li>
+          <li><a href="mailto:abc@example.com">Contact</a></li>
+        </ul>
+      </div>
+    </footer>
+  </body>
+</html>
