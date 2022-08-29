@@ -4,9 +4,9 @@
     position: relative;
     height: 300px;
     background-color: $c-grey;
-    @media (min-width: 600px) {
-        height: 200px;
-    }
+    // @media (min-width: 600px) {
+    //     height: 250px;
+    // }
     img {
         width: inherit;
         height: inherit;
@@ -28,7 +28,13 @@
         border-radius: 0;
         margin-top: 0;
     }
-    
+
+    &__body {
+        @media (min-width: 600px) {
+            display: flex;
+            justify-content: center;
+        }
+    }
 
     // title under hero img
     &__title__wrap {
@@ -72,7 +78,13 @@
         width: inherit;
         padding-bottom: 2rem;
         padding-top: 1rem;
-        // entree/plat/dessert with underlines
+
+        @media (min-width: 600px) {
+            padding-bottom: 2rem;
+            padding-top: 1rem;
+            padding-right: 1rem;
+            width: 33%;
+        }
 
         h2 {
             @include flexbox(column, 0, 0);
@@ -82,6 +94,7 @@
             line-height: 12px;
             text-transform: uppercase;
 
+        // entree/plat/dessert with underlines
         &::after {
             content: "";
             border-bottom: 3px $c-accent solid;
@@ -91,32 +104,17 @@
             }
        
     }
-    
-    &__card-container {
-        @media (min-width: 600px) {
-            display: flex;
-            justify-content: space-between; 
-            flex-wrap: wrap;
-        }
-    }
 
-
-        // each cards inside entree/plat/dessert
-        // html <label> = .card      
-    
+    // each cards inside entree/plat/dessert
+    // html <label> = .card      
     .card {
         @include flexbox(row, none, self-end);
         @include shadow(1px 5px 25px -17px #000);
         border-radius: 15px;
         margin: 1rem 0;
-        // position: relative;
         transition: 400ms;
         overflow: hidden;
         height: 4rem;
-        @media (min-width: 600px) {
-            width: 33%;
-            
-        }
 
         &__wrap {
             @include flexbox(row, space-between, end);
@@ -175,23 +173,24 @@
             }
         }
     }
-    // commander button
-    &__btn {
-        height: 100px;
-        margin: 0 auto;
-        @include flexbox(row, center, baseline);
-        a {
-            @include btn(15px 45px);
-            margin-top: 0;
-            button {
-                @include btn-reset;
-            }    
-        }
-        a:hover {
-            @include btn-hover;
-            }
-        @media (min-width: 600px) {
-            height: 118px;
-        }
-    }
 }   
+ // commander button
+ .main__btn {
+    height: 100px;
+    margin: 0 auto;
+    @include flexbox(row, center, baseline);
+    a {
+        @include btn(15px 45px);
+        margin-top: 0;
+        button {
+            @include btn-reset;
+        }    
+    }
+    a:hover {
+        @include btn-hover;
+        }
+    @media (min-width: 600px) {
+        height: 118px;
+        background-color: $c-grey;
+    }
+}
