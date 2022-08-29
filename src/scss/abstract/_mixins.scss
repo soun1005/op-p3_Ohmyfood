@@ -20,6 +20,10 @@
     &:hover {
         @include hover-scale;
     }
+    @media (min-width: 600px) {
+        margin: 0 auto;
+        width: 120px;
+    }
 }
 
 @mixin hover-scale($transform:scale(1.2), $transition: 0.5s) {

@@ -15,12 +15,6 @@ footer {
             @include hover-scale(scale(1.02), 0.3s);
             color: $c-primary;
         }
-        // &::after {
-        //     content: "";
-        //     width: 20px;
-        //     height: 2px;
-        //     background-color: $c-accent;
-        // }
     }
     li {
         margin-bottom: 5px;
@@ -33,25 +27,20 @@ footer {
     a:hover {
         color: $c-accent;
     }
-}
-
-@media (min-width: 600px) {
-    footer {
+    
+    @media (min-width: 600px) {
         padding: 2.5rem 0;
-       .container{
-            @include flexbox(row, space-between, center);
-            gap: 2rem;
-            padding: $side-padding;
+        .container{
+                @include flexbox(row, space-between, center);
+                gap: 2rem;
+                padding: $side-padding;
         }
         ul {
-            display: flex;
-            gap: 1rem;
+                display: flex;
+                gap: 1rem;
         }
         li, h2 {
-            margin-bottom: 0;
+                margin-bottom: 0;
         }
-
     }
 }
-    
-   

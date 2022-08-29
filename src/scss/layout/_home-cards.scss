@@ -2,6 +2,7 @@
     padding: $side-padding;
     background-color: $c-grey;
     padding-bottom: 3rem;
+
     // title
     h2 {
         font-size: 1.25rem;
@@ -69,13 +70,6 @@
             line-height: 22px;
         }
     }
-
-
-// // input + icon container
-//     label{  
-//         display: block;
-//         position: absolute;
-//     }
 }
 
 @include heart;

@@ -1,4 +1,3 @@
-// mixins
 // mixin heart used in : home.scss, menu.scss
 @mixin heart($bottom:10%, $right:12%, $icon-bottom: 6%) {
     .label-heart{
@@ -31,25 +30,24 @@
     }
 }
 
-// heart animation in 'home-cards'
 $class-name: '#restaurant';
 @each $class-name in $class-name {
-@for $i from 1 through 4 {
-// input display none
-#{$class-name}-heart-#{$i}, #menu-heart {
-    display: none;
-    // checked when clicked(mobile version)
-    &:checked ~ .heart__checked .fa-solid {
-        animation: heart 300ms ease-out both;
+    @for $i from 1 through 4 {
+    // input display none
+        #{$class-name}-heart-#{$i}, #menu-heart {
+            display: none;
+            // checked when clicked(mobile version)
+            &:checked ~ .heart__checked .fa-solid {
+                animation: heart 300ms ease-out both;
+            }
+            // checked when hover(desktop version)
+            @media (min-width: 600px) {
+                &:hover ~ .heart__checked .fa-solid {
+                    animation: heart 300ms ease-out both;
+                }
+            }
+        } 
     }
-    // checked when hover(desktop version)
-    @media (min-width: 600px) {
-        &:hover ~ .heart__checked .fa-solid {
-            animation: heart 300ms ease-out both;
-        }
-    }
-} 
-}
 } 
 
 // keyframes

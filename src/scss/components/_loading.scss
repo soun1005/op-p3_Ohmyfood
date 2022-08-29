@@ -26,6 +26,10 @@
      animation:falling 1.3s cubic-bezier(0.680, -0.550, 0.265, 1.550) forwards,
              rotating 400ms ease-in-out 1.3s both,
             falling 1.3s cubic-bezier(0.680, -0.550, 0.265, 1.550) 1.7s reverse;
+    @media (min-width: 600px) {
+      // bigger font for the desktop version
+          font-size: 6rem;
+    }
     }
 }
 
@@ -65,14 +69,6 @@
       width:0;
       display: none;
   }
-  }
-  
-  @media (min-width: 600px) {
-    .loading {
-      &__spiner{ 
-        font-size: 6rem;
-      }
-    } 
   }
 
 /* fading effects */
