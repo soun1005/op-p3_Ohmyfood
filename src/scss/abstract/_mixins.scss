@@ -14,10 +14,8 @@
 // logo in the headers
 @mixin logo {
     display: block;
-    width: 8rem;
-    height: auto;
+    width: 6rem;
     margin: 0 auto;
-    padding: $s3 0;
     transition: 0.5s;
     &:hover {
         @include hover-scale;

@@ -4,12 +4,13 @@
     color: #fff;
     border-radius: 25px;
     padding: $padding;
+    display: block;
     background-image: linear-gradient(-180deg, $c-secondary, $c-primary);
     cursor: pointer;
-    display: inline-block;
     background-color: initial;
     overflow: hidden;
     transition: 0.3s;
+    border: none;
 }
 
 @mixin btn-hover{
@@ -17,7 +18,14 @@
     @include hover-scale(scale(1.05), 0.3s);
     background: rgb(195,149,250);
     background: linear-gradient(183deg, #ff94e1, #a978e3 100%);
-   
-
 }
 
+@mixin btn-reset{
+    background: none;
+    color: inherit;
+    border: none;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+}

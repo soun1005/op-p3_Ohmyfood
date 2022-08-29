@@ -12,7 +12,6 @@
     }
 }
 
-
 .menu {
 // menu container
     background-color: $c-grey;
@@ -26,6 +25,7 @@
         border-radius: 0;
         margin-top: 0;
     }
+    
 
     // title under hero img
     &__title__wrap {
@@ -63,7 +63,6 @@
                 
             }
         }    
-
     }
     //  cards container by entree/plat/dessert
     &__container {
@@ -72,18 +71,23 @@
         padding-bottom: 7.5%;
         padding-top: 1rem;
         // entree/plat/dessert with underlines
+
         h2 {
-        font-size: 1rem;
-        font-weight: 300;
-        line-height: 12px;
+            @include flexbox(column, 0, 0);
+            gap: 0.3rem;
+            font-size: 1rem;
+            font-weight: 300;
+            line-height: 12px;
+        &::after {
+            content: "";
+            border-bottom: 3px $c-accent solid;
+            width: 2.5rem;
+            line-height: 20px;
         }
-        // h2::after {
-        //     border-bottom: 3px $c-accent solid;
-        //     width: 36px;
-        //     margin-top: 0px;
-        //     padding-bottom: 5px;
-        // }
+            }
+       
     }
+    
 
         // each cards inside entree/plat/dessert
         // html <label> = .card      
@@ -96,6 +100,7 @@
         // position: relative;
         transition: 400ms;
         overflow: hidden;
+        height: 4rem;
 
         &__wrap {
             @include flexbox(row, space-between, end);
@@ -109,7 +114,7 @@
         // card__price
         &__price {
             display: block;
-            padding: 1rem 0.5rem;
+            padding: 1rem;
             transition: 200ms;
             font-size: 14px;
         }
@@ -130,7 +135,7 @@
                     display: block;
                     }
                 &-title {
-                    font-size: 1.2rem;
+                    font-size: 1rem;
                 }
                 &-dscr {
                     font-size: 14px;
@@ -141,7 +146,7 @@
         &__checked{
             color: white;
             background-color: $c-accent;
-            height: 74.3px;
+            height: inherit;
             width: 106px;
             font-size: 23px;
             display: none;
@@ -162,12 +167,15 @@
         a {
             @include btn(15px 45px);
             margin-top: 0;
-            }
+            button {
+                @include btn-reset;
+            }    
+        }
         a:hover {
             @include btn-hover;
             }
         @media (min-width: 600px) {
             height: 118px;
         }
-        }
+    }
 }   
