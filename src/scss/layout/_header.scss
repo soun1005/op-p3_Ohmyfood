@@ -4,7 +4,6 @@ header {
     @include flexbox(row, none, center);
     position: relative;
 
-
     img {
         @include logo;
     }
@@ -23,5 +22,5 @@ header {
         }
     }
     
-    }
+}
 

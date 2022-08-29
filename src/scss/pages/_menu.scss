@@ -60,7 +60,6 @@
             @media (min-width: 600px) {
                 font-size: 35px;
                 margin: 0;
-                
             }
         }    
     }
@@ -68,7 +67,7 @@
     &__container {
         padding: $side-padding;
         width: inherit;
-        padding-bottom: 7.5%;
+        padding-bottom: 2rem;
         padding-top: 1rem;
         // entree/plat/dessert with underlines
 
@@ -88,6 +87,12 @@
        
     }
     
+    &__card-container {
+        @media (min-width: 600px) {
+            display: flex;
+            justify-content: space-between; }
+    }
+
 
         // each cards inside entree/plat/dessert
         // html <label> = .card      
@@ -101,6 +106,10 @@
         transition: 400ms;
         overflow: hidden;
         height: 4rem;
+        @media (min-width: 600px) {
+            width: 33%;
+            
+        }
 
         &__wrap {
             @include flexbox(row, space-between, end);

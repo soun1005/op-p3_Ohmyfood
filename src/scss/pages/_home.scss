@@ -57,6 +57,7 @@ body {
 
     h1 {
         font-size: 1.8rem;
+        // margin in a line
         margin-left: 3.5rem;
         margin-right: 3.5rem;
         margin-bottom: 0.7rem;
@@ -71,25 +72,21 @@ body {
     }
 }
     .card-body {
-        display: inline-block;
-        position: absolute;
-        left: 82px;
         font-size: 16px;
         font-weight: 500;
+        margin-left: 1rem;
     }
 
     .card-num {
         width: 23px;
         height: 23px;
         font-size: 15px;
-        display: inline-block;
-        padding: 3px;
+        @include flexbox(row, center, center);
         color: $c-white;
         border-radius: 100%;
         background-color: $c-primary;
         position: absolute;
-        left: -7px;
-        text-align: center;
+        left: -5px;
     }
 
 .function {
@@ -102,6 +99,13 @@ body {
         h2 {
             margin: 50px 0;
         }   
+        ol {
+            display: flex;
+            justify-content: space-between;
+        }
+        li {
+            width: 32%;
+        }
     }
     h2 {
         margin: $s3*2 0;
@@ -127,9 +131,8 @@ body {
     }
 
     i {
-        position: absolute;
         color: $c-icon;
         font-size: $s2;
-        left: 40px;
+        margin-left: 2.5rem;
     }
 }
