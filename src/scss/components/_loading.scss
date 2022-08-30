@@ -33,12 +33,6 @@
     }
 }
 
-// hiding background
-.body {
-  animation: hide-bg;
-  animation-duration: 3s;
-}
-
 // keyframes
 @keyframes falling {
   0% { opacity: 0; top: -400px; }
@@ -52,24 +46,7 @@
   100%{
     transform: rotate(1080deg);
   }
-  
 }
-
-@keyframes fade {
-/* fading effects */
-  from{
-      opacity:1;
-      display: block;
-  }
-  to{
-      opacity:0;
-      z-index:-100;
-      display:none;
-      height:0;
-      width:0;
-      display: none;
-  }
-  }
 
 /* fading effects */
 @keyframes fade {
@@ -87,11 +64,17 @@
   }
 }
   
-@keyframes hide-bg {
-  from{
-      overflow:hidden;
-  }
-  to{
-      overflow:visible;
-  }
-      }
+// @keyframes hide-bg {
+//   from{
+//       overflow:hidden;
+//   }
+//   to{
+//       overflow:visible;
+//   }
+//       }
+
+// hiding background
+// .body {
+//   animation: hide-bg;
+//   animation-duration: 3s;
+// }

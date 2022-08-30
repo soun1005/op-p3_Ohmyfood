@@ -37,9 +37,6 @@ body {
     a {
         @include btn(15px 25px);
         margin-top: $s0;
-        button {
-            @include btn-reset;
-        }
     }
 
     a:hover {

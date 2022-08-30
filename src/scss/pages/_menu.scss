@@ -178,15 +178,16 @@
  // commander button
  .main__btn {
     background-color: $c-grey;
-    height: 100px;
+    height: 9rem;
     margin: 0 auto;
+    padding-top: 2rem;
+
+
+    
     @include flexbox(row, center, baseline);
     a {
         @include btn(15px 45px);
-        margin-top: 0;
-        button {
-            @include btn-reset;
-        }    
+        margin-top: 0; 
     }
     a:hover {
         @include btn-hover;
