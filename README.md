@@ -10,17 +10,19 @@ Link 👉🏻 [Ohmyfood!](https://soun1005.github.io/op-p3_Ohmyfood/)
 
 ## Features
 
-📱 A mobile-first website which is fully responsive
+📱 A mobile-first website which is fully responsive.
 
 ⌨️ Development done only by HTML and CSS.
 
 🗜 CSS written in SASS(SCSS) and compiled to CSS.
 
-🧨 No library / Javascript used.
+🧨 No framework / Javascript used.
 
 💖 'Heart' icon and 'menu' clickable on mobile & hover effect on desktop.
 
 🛸 Fabulous loading-spinner made from scratch.
+
+🤸🏻‍♂️ W3C Validated.
 
 ## Tools Used
 
