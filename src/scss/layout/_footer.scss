@@ -27,9 +27,9 @@ footer {
     a:hover {
         color: $c-accent;
     }
-    
+
     @media (min-width: 600px) {
-        padding: 2.5rem 0;
+        padding: 3.5rem 0;
         .container{
                 @include flexbox(row, space-between, center);
                 gap: 2rem;

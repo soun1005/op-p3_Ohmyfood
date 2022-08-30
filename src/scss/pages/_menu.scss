@@ -33,6 +33,7 @@
         @media (min-width: 600px) {
             display: flex;
             justify-content: center;
+            padding-bottom: 2.2rem;
         }
     }
 
@@ -176,6 +177,7 @@
 }   
  // commander button
  .main__btn {
+    background-color: $c-grey;
     height: 100px;
     margin: 0 auto;
     @include flexbox(row, center, baseline);
@@ -190,7 +192,7 @@
         @include btn-hover;
         }
     @media (min-width: 600px) {
-        height: 118px;
+        height: 130px;
         background-color: $c-grey;
     }
 }
