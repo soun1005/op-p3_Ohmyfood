@@ -88,7 +88,7 @@
         }
 
         h2 {
-            @include flexbox(column, 0, 0);
+            @include flexbox(column, start, normal);
             gap: 0.3rem;
             font-size: 1rem;
             font-weight: 300;
@@ -109,7 +109,7 @@
     // each cards inside entree/plat/dessert
     // html <label> = .card      
     .card {
-        @include flexbox(row, none, self-end);
+        @include flexbox(row, start, self-end);
         @include shadow(1px 5px 25px -17px #000);
         border-radius: 15px;
         margin: 1rem 0;
@@ -169,7 +169,7 @@
                 top: 4px;
             }
             i {
-                @include flexbox(0, center, center);
+                @include flexbox(row, center, center);
                 height: inherit;
             }
         }

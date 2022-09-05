@@ -86,7 +86,7 @@
             padding: 50px 0;
         }
     &__wrap {
-        @include flexbox(row, space-between, 0);
+        @include flexbox(row, space-between, normal);
         flex-wrap: wrap;
         }
     figure {

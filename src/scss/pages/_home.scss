@@ -100,7 +100,7 @@ body {
 
     a {
         @include shadow(1px 5px 25px -17px rgba(0,0,0,1));
-        @include flexbox(0, 0, center);
+        @include flexbox(row, start, center);
         border-radius: 15px;
         background-color: $c-grey;
         height: 4rem;
